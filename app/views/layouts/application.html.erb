@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Farmsharing</title>
+  <title><%= full_title(yield(:title)) %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <%= render 'layouts/shim' %>
 </head>
 <body>
+  <% if member_signed_in? %>
+    <p><%= link_to "ログアウト", destroy_member_session_path, method: :delete %></p>
+  <% end %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 
-<%= yield %>
-
+	<%= render 'layouts/header' %>
+    <div class="container">
+		<%= yield %>
+		 <%= render 'layouts/footer' %>
+	</div>
 </body>
 </html>

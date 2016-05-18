@@ -32,6 +32,12 @@ $(function() {
 </script>
 </head>
 <body>
+  <% if member_signed_in? %>
+    <p><%= link_to "ログアウト", destroy_member_session_path, method: :delete %></p>
+  <% end %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
 	<%= render 'layouts/header' %>
     <div class="container">
 		<%= yield %>

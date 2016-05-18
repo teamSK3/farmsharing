@@ -18,7 +18,7 @@
       <tr>
         <td><%= item.category %></td>
         <td><%= item.name %></td>
-        <td><%= item.image %></td>
+        <td><%= image_tag item.image_url %></td>
         <td><%= item.count %></td>
         <td><%= link_to 'Show', item %></td>
         <td><%= link_to 'Edit', edit_item_path(item) %></td>

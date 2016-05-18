@@ -33,10 +33,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 4em;
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+  color:white;
 }
 
 h2 {
@@ -51,6 +52,7 @@ h2 {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+  color:white;
 }
 
 /* header */
@@ -69,6 +71,11 @@ p {
   text-decoration: none;
   }
 }
+container ul li{
+  color:white;
+}
+
+
 
 /* footer */
 
@@ -76,11 +83,11 @@ footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid $gray-medium-light;
-  color: $gray-light;
+  color: black;
   a {
-  color: $gray;
+  color: black;
   &:hover {
-  color: $gray-darker;
+  color: white;
   }
 }
 }
@@ -97,4 +104,46 @@ footer ul {
 footer ul li {
   float: left;
   margin-left: 15px;
+}
+
+
+
+#slideshow {
+   position: relative;
+   width:  1140px; /* ボックスの横幅 */
+   height: 600px; /* ボックスの高さ */
+}
+
+#slideshow p {
+   position: absolute;
+   top:  0;
+   left: 0;
+   z-index: 8;
+   opacity: 0.0;
+   margin: 0;
+   background-color: white; /* ボックスの背景色(必須) */
+   height: 300px; /* ボックスの高さ */
+}
+
+#slideshow p.active {
+   z-index: 10;
+   opacity: 1.0;
+}
+
+#slideshow p.last-active {
+   z-index: 9;
+}
+
+#slideshow p img {
+   width:  1140px; /* 画像の横幅 */
+   height: 600px; /* 画像の高さ */
+   display: block;
+   border: 0;
+   margin-bottom: 10px; /* 画像下部の余白 */
+}
+
+
+
+.container{
+  background-color:green;
 }

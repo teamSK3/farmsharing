@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only: [:show, :edit, :update, :destroy]
+  # before_action :set_item, only: [:show, :edit, :update, :destroy]
 
   # GET /items
   # GET /items.json
@@ -10,6 +10,7 @@ class ItemsController < ApplicationController
   # GET /items/1
   # GET /items/1.json
   def show
+    @item = Item.find(params[:id])
   end
 
   # GET /items/new
@@ -19,12 +20,20 @@ class ItemsController < ApplicationController
 
   # GET /items/1/edit
   def edit
+    @item = Item.find(params[:id])
   end
 
   # POST /items
   # POST /items.json
   def create
-    @item = Item.new(item_params)
+    params.permit!
+     @item = Item.new(params[:item])
+    if @item.save
+      redirect_to @item, notice: "商品を投稿しました。"
+    else
+      render "new"
+    end
+  end
 
     respond_to do |format|
       if @item.save
@@ -35,7 +44,7 @@ class ItemsController < ApplicationController
         format.json { render json: @item.errors, status: :unprocessable_entity }
       end
     end
-  end
+
 
   # PATCH/PUT /items/1
   # PATCH/PUT /items/1.json
@@ -54,6 +63,8 @@ class ItemsController < ApplicationController
   # DELETE /items/1
   # DELETE /items/1.json
   def destroy
+    params.permit!
+    @item =Item.find(params[:id])
     @item.destroy
     respond_to do |format|
       format.html { redirect_to items_url, notice: 'Item was successfully destroyed.' }
@@ -72,3 +83,4 @@ class ItemsController < ApplicationController
       params.require(:item).permit(:category, :name, :image, :count)
     end
 end
+

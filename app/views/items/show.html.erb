@@ -12,10 +12,8 @@
 
 <p>
   <strong>Image:</strong>
-  	
-	<%= @item.image.url %> <!-- #=> ファイルのパス（APP_ROOT/publicからのパス） -->
-	<%= @item.image_identifier %> <!-- #=> ファイル名 -->
-	
+
+	<%= image_tag @item.image_url %>
 </p>
 
 <p>

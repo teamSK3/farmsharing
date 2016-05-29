@@ -72,10 +72,15 @@ p {
   text-decoration: none;
   }
 }
-container ul li{
-  color:white;
+.container ul li{
+  font-color:red;
 }
-
+.navbar-right li a{
+  color: white !important;
+  &:hover {
+  background-color: black !important;
+  }
+}
 
 
 /* footer */

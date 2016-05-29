@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
   devise_for :members
   root             'static_pages#home'
+  get 'item'    => 'items#index'
   get 'help'    => 'static_pages#help'
   get 'about'   => 'static_pages#about'
   get 'contact' => 'static_pages#contact'
 
-  resources:items
+  resources :items
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

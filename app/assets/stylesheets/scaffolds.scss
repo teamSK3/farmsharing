@@ -19,14 +19,14 @@ pre {
 }
 
 a {
-  color: #000;
+  color: #FFF;
 
   &:visited {
     color: white;
   }
 
   &:hover {
-    color: #fff;
+    color: #FFF;
     background-color: #000;
   }
 }
@@ -43,7 +43,7 @@ div {
 
 .field_with_errors {
   padding: 2px;
-  background-color: red;
+  background-color: blue;
   display: table;
 }
 

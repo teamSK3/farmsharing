@@ -1,4 +1,7 @@
 class HomeController < ApplicationController
-	def top
-	end
+	
+	
+  def mypage
+    @member = Member.find(params[:id])
+  end
 end

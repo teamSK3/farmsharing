@@ -4,7 +4,8 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
   def index
-    @items = Item.all
+    @q     = Item.search(params[:q])
+    @items = @q.result(distinct: true)
   end
 
   # GET /items/1

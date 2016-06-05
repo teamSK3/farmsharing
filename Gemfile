@@ -28,6 +28,7 @@ gem 'carrierwave'
 gem 'rmagick'
 gem 'hirb'
 
+gem 'acts_in_relation'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

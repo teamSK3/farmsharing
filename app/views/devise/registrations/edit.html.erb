@@ -27,6 +27,26 @@
     <%= f.password_field :current_password, autocomplete: "off" %>
   </div>
 
+  <div><%= f.label :name %><br />
+  <%= f.text_field :name, autofocus: true %>
+  </div>
+
+<div><%= f.label :image %><br />
+  <%= f.file_field :image %>
+</div>
+<div><%= f.label :birthday %><br />
+  <%= f.date_select :birthday,
+              start_year: 1940, end_year: Time.now.year,
+              use_month_numbers: true %>
+</div>
+<div><%=f.label :０：男 %><br />
+  <%= f.radio_button :sex, 0 %>
+</div>
+<div><%=f.label :１：女 %><br />
+  <%= f.radio_button :sex, 1 %>
+</div>
+
+
   <div class="actions">
     <%= f.submit "Update" %>
   </div>

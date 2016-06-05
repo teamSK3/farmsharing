@@ -7,6 +7,13 @@ Rails.application.routes.draw do
   get 'contact' => 'static_pages#contact'
   get 'members/:action' => 'members'
   resources :items
+  resources :members do
+    member do
+      get :following, :followers
+    end
+  resources :relationships,       only: [:create, :destroy]
+
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

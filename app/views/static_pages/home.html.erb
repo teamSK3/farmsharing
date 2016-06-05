@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-
     <h1>FARM SHARING</h1>
    
 　　
@@ -37,8 +35,13 @@
     
       
     
+    <% if member_signed_in? %>
 
-
+      <section class="stats">
+        <%= render 'devise/shared/stats' %>
+      </section>
+    <% end %>
+  
   
     
     <div class="center jumbotron">

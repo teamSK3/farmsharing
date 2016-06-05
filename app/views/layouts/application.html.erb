@@ -1,14 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Farmsharing</title>
+  <title><%= full_title(yield(:title)) %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <%= render 'layouts/shim' %>
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript">
+function slideSwitch() {
+   var $active = $('#slideshow p.active');
+
+   if ( $active.length == 0 ) $active = $('#slideshow p:last');
+
+   var $next =  $active.next().length ? $active.next()
+      : $('#slideshow p:first');
+
+   $active.addClass('last-active');
+
+   $next.css({opacity: 0.0})
+      .addClass('active')
+      .animate({opacity: 1.0}, 1000, function() {
+         $active.removeClass('active last-active');
+      });
+}
+
+$(function() {
+   setInterval( "slideSwitch()", 2100 );
+});
+</script>
 </head>
 <body>
-
-<%= yield %>
-
+  <% if member_signed_in? %>
+    <p><%= link_to "ログアウト", destroy_member_session_path, method: :delete %></p>
+  <% end %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+<nav>
+    <!-- user_signed_in? はユーザがログインしているか調べるdeviseのHelperメソッド -->
+    <% if member_signed_in? %>
+      <!-- current_user は現在ログインしているUserオブジェクトを返すdeviseのHelperメソッド -->
+      <!-- *_path はUserモデルを作成したときに、
+        deviseにより自動で作成されてますので、rake routesで確認できます -->
+        Logged in as <strong><%= current_member.name %></strong>. 
+      <%= link_to 'プロフィール変更', edit_member_registration_path %> |
+      <%= link_to "ログアウト", destroy_member_session_path, method: :delete %>
+    <% else %>
+      <%= link_to "サインイン", new_member_registration_path %> |
+      <%= link_to "ログイン", new_member_session_path %>
+    <% end %>
+  </nav>
+	<%= render 'layouts/header' %>
+    <div class="container">
+		<%= yield %>
+		 <%= render 'layouts/footer' %>
+	</div>
 </body>
 </html>

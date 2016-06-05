@@ -1,0 +1,19 @@
+<% if member_signed_in? %>
+  <% if item.like_member(current_member.id) %>
+      <%= image_tag("redheart.png") %>
+      <span>
+        <%= item.like_count %>
+      </span>
+  <% else %>
+    <%= button_to item_likes_path(item), id: "like-button", remote: true do %>
+      <%= image_tag("grayheart.jpeg") %>
+      <span>
+        <%= item.like_count %>
+      </span>
+  <% end %>
+<% else %>
+  <% = image_tag("grayheart.jpeg") %>
+    <span>
+      <%= item.like_count %>
+    </span>
+<% end %>

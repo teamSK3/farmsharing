@@ -47,6 +47,10 @@ ActiveRecord::Schema.define(version: 20160530125035) do
     t.string   "unconfirmed_email"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "name"
+    t.string   "image"
+    t.integer  "sex"
+    t.date     "birthday"
   end
 
   add_index "members", ["email"], name: "index_members_on_email", unique: true

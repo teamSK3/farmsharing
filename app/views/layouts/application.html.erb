@@ -43,7 +43,7 @@ $(function() {
       <!-- current_user は現在ログインしているUserオブジェクトを返すdeviseのHelperメソッド -->
       <!-- *_path はUserモデルを作成したときに、
         deviseにより自動で作成されてますので、rake routesで確認できます -->
-      Logged in as <strong><%= current_members.name %></strong>.
+        Logged in as <strong><%= current_member.name %></strong>. 
       <%= link_to 'プロフィール変更', edit_member_registration_path %> |
       <%= link_to "ログアウト", destroy_member_session_path, method: :delete %>
     <% else %>

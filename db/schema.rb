@@ -13,16 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20160530125035) do
 
-
-  create_table "follows", force: :cascade do |t|
-    t.integer  "member_id"
-    t.integer  "target_member_id"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
-  end
-
-  add_index "follows", ["member_id", "target_member_id"], name: "index_follows_on_member_id_and_target_member_id", unique: true
-
   create_table "items", force: :cascade do |t|
     t.string   "category"
     t.string   "name"
@@ -57,25 +47,10 @@ ActiveRecord::Schema.define(version: 20160530125035) do
     t.string   "unconfirmed_email"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.string   "name"
-    t.string   "image"
-    t.integer  "sex"
-    t.date     "birthday"
   end
 
   add_index "members", ["email"], name: "index_members_on_email", unique: true
   add_index "members", ["reset_password_token"], name: "index_members_on_reset_password_token", unique: true
-
-  create_table "relationships", force: :cascade do |t|
-    t.integer  "follower_id"
-    t.integer  "followed_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  add_index "relationships", ["followed_id"], name: "index_relationships_on_followed_id"
-  add_index "relationships", ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true
-  add_index "relationships", ["follower_id"], name: "index_relationships_on_follower_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "name"

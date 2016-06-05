@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :members
+
+  devise_for :members, controllers: {
+  registrations: 'members/registrations'
+}
   root             'static_pages#home'
   get 'items'    => 'items#index'
   get 'help'    => 'static_pages#help'
@@ -13,6 +16,9 @@ Rails.application.routes.draw do
   resources :items do
     resource :likes, only: [:create, :destroy]
   end
+  # get 'members/:action/:id' => 'members'
+  resources :members
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

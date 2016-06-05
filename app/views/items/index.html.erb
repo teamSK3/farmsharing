@@ -1,49 +1,50 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing  Items</h1>
+<h1>農産物　一覧</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Category</th>
-      <th>Name</th>
-      <th>Image</th>
-      <th>Count</th>
-      <th colspan="3"></th>
+      <th>画像</th>
+      <th>カテゴリ</th>
+      <th>商品名</th>
+      <th>個数</th>
+      <th colspan="4"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @items.each do |item| %>
       <tr>
+        <td colspan="3"><%= image_tag item.image_url %></td>
+      </tr>
+      <tr>
         <td><%= item.category %></td>
         <td><%= item.name %></td>
-        <td><%= image_tag item.image_url %></td>
         <td><%= item.count %></td>
-        <td><%= link_to 'Show', item %></td>
-        <td><%= link_to 'Edit', edit_item_path(item) %></td>
-        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <td>
         <% if member_signed_in? %>
           <% if item.like_member(current_member.id) %>
-            <%= image_tag("redheart.png") %>
+            <%= link_to image_tag("redheart.png") , item_likes_path(item), id: "like-button", method: :delete %>
             <span>
-              <%= item.like_count %>
+              <%= item.likes.count %>
             </span>
           <% else %>
-            <%= button_to item_likes_path(item), id: "like-button", remote: true do %>
-            <%= image_tag("grayheart.jpeg") %>
-            <span>
-              <%= item.like_count %>
-            </span>
+            <%= link_to image_tag("grayheart.jpeg"), item_likes_path(item), id: "like-button", method: :post %>
+              <span>
+                <%= item.likes.count %>
+              </span>
           <% end %>
         <% else %>
-          <% = image_tag("grayheart.jpeg") %>
+          <%= image_tag("grayheart.jpeg") %>
           <span>
-            <%= item.like_count %>
+            <%= item.likes.count %>
           </span>
         <% end %>
         </td>
+                <td><%= link_to 'Show', item %></td>
+        <td><%= link_to 'Edit', edit_item_path(item) %></td>
+        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

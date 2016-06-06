@@ -1,0 +1,30 @@
+<table class="attr">
+
+  <tr>
+    <th><%= form.label :name %></th>
+    <td><%= form.text_field :name %></td>
+  </tr>
+  <tr>
+  <tr>
+      <th><%= form.label :０：男  %><br /></th>
+      <td><%= form.radio_button :sex, 0 %></td>
+  </tr>
+  <tr>
+      <th><%= form.label :１：女 %><br /></th>
+      <td><%= form.radio_button :sex, 1 %></td>
+  </tr>
+  <tr>
+    <th><%= form.label :birthday %></th>
+    <td><%= form.date_select :birthday,
+              start_year: 1940, end_year: Time.now.year,
+              use_month_numbers: true %></td>
+  </tr>
+  <tr>
+    <th><%= form.label :email %></th>
+    <td><%= form.text_field :email %></td>
+  </tr>
+  <tr>
+    <th><%= form.label :image %></th>
+    <td><%= form.file_field :image %></td>
+  </tr>
+</table>

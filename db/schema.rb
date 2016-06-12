@@ -29,6 +29,14 @@ ActiveRecord::Schema.define(version: 20160526020358) do
     t.integer  "count"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "Price"
+  end
+
+  create_table "likes", force: :cascade do |t|
+    t.integer  "item_id"
+    t.integer  "member_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "members", force: :cascade do |t|

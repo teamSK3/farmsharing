@@ -36,7 +36,7 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
-  color:white;
+  color:#40d47e;
 
 }
 
@@ -84,9 +84,9 @@ p {
   font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
 }
 .navbar-right li a{
-  color: white !important;
+  color: green !important;
   &:hover {
-  background-color: black !important;
+  background-color: #40d47e !important;
   }
 }
 
@@ -167,7 +167,7 @@ footer ul li {
 }
 
 .container{
-  background-color:green;
+  background-color:white;
   width:100%;
 }
 .contents_box1{
@@ -191,11 +191,16 @@ footer ul li {
   top: 50px;
 }
 
+#about p{
+  color:#27ae60;
+}
+
 .contents_box1 p{
    position:relative;
    left: 200px;
    bottom: 250px;
    font-size:15px;
+   color:#27ae60;
 
 }
 
@@ -204,10 +209,11 @@ footer ul li {
    left: 200px;
    bottom: 250px;
    font-size:15px;
+   color:#27ae60;
 
 }
 .contents_box3 p{
-
+   color:#27ae60;
 
   
 }

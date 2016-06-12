@@ -26,8 +26,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'carrierwave'
 gem 'rmagick'
-gem 'hirb'
-
+gem "ransack"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 
-    <h1>FARM SHARING</h1>
-   
-　　
-
     <div id="slideshow">
 
        <p class="active">
@@ -30,27 +26,65 @@
 
     <div class="center-spell">
 
-      
-
+    
 
     </div>
-    
-      
-    
 
-
-  
-    
-    <div class="center jumbotron">
-    <h1>Welcome to the FARM SHARING</h1>
+    <div id="title">
+    <h1>Welcome to the Farm Sharing!</h1>
 
     <h2>
-        Let's FarmSharing!!!
+        これまでに無い新たな食材と出会ってみませんか？
+        <br><br>
+        
     </h2>
+      <%= link_to "初めての方はここから",new_member_registration_path, class: "btn btn-lg btn-primary" %>
+    </div>
+      
+<div id="about">
+    <h1>About</h1>
+    <p>
+      FarmSharingとは農家と購買者のマッチングサービスです。<br>
+      このサイトは野菜直売所の役割を果たしています。<br>
+      FarmSharingはあなたに新鮮な野菜を購入する機会を贈ります。<br>
+      農業品生産者に新しい商品提供の方法を贈ります。<br>
+      野菜達はあなたの食生活に"彩り"をもたらしてくれるでしょう。<br>
+      　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　by T.K
 
-      <%= link_to "Sign up now!",new_member_registration_path, class: "btn btn-lg btn-primary" %>
+
+
+    </p>
+    
+
+
+    <div class="contents_box1">
+      <img src="assets/nouka1.jpg" style="border-radius: 100%;" width="400" height="400" alt="画像1">
+      <p>
+      農家<br>
+      あなたが作った野菜を個数、値段などを自由に設定してサイト内で販売することができます<br>
+      農家自身が消費者に直接提供する事で、あなたの野菜の評判が高まり野菜を<br>
+      ブランド化させる事もできるでしょう<br>
+      farmsharingは野菜だけではなく農家にもスポットライトを当てます<br>
+      この野菜は誰が作った野菜なのかを消費者に知ってもらえるよう<br>
+      良いサービスを提供していきます
+      </p>
+    </div>
+
+    <div class="contents_box2">
+      <img src="assets/kaimono1.jpg" style="border-radius: 100%;" width="400" height="400" alt="画像2">
+      <p>
+        購買者<br>
+        あなたにいつもより新鮮で美味しい野菜を提供します<br>
+        新鮮な野菜は鮮度の落ちた野菜と比べると栄養価が高いです<br>
+        鮮度は時間とともに落ちていきます<br>
+        取れたての新鮮な野菜はあなたの健康的な体づくりに大きく貢献してくれるでしょう<br>
+        それと共にあなたは購入した野菜を評価できます。<br>評価によって農家のみなさんはより良い野菜を作る事ができます<br>
+        あなたはさらに美味しい野菜を購入する事ができます<br>
+      </p>
+    </div>
 
 </div>
+  
 <!-- シェアボタン [ここからコピー] -->
 <div class="social-area-syncer">
   <ul class="social-button-syncer">

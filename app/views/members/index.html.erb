@@ -1,0 +1,28 @@
+<%  page_title = "会員一覧" %>
+<h1><%=  page_title %></h1>
+
+
+<% if @members.present? %>
+<table class="list">
+  <tr>
+    <th>名前</th>
+    <th>生年月日</th>
+    <th>image</th>
+  </tr>
+  <% @members.each do |member| %>
+  <tr>
+    <td><%= link_to member.name, member %></td>
+    <td><%= member.birthday %></td>
+    <td><%= member.sex %></td>
+    <td><%= image_tag member.image_url %></td>
+    <td>
+      <%= link_to "編集", [:edit, member] %> |
+      <%= link_to "削除", member, method: :delete,
+            data: { confirm: "本当に削除しますか?" } %>
+    </td>
+  </tr>
+  <% end %>
+</table>
+<% else %>
+<p>会員情報がありません。</p>
+<% end %>

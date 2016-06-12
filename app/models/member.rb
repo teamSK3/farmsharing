@@ -6,35 +6,39 @@ class Member < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  # has_many :active_relationships, class_name: Relationships, foreign_key: :follower_id, dependent: :destroy
-  # has_many :passive_relationships, foreign_key: :followed_id, class_name: Relationships, dependent: :destroy
+  has_many :active_relationships, class_name: "Relationship", foreign_key: :follower_id, dependent: :destroy
+  has_many :passive_relationships, class_name: "Relationship",foreign_key: :followed_id, dependent: :destroy
 
-  # has_many :followings, through: :active_relationships
-  # has_many :followers, through: :passive_relationships
+  has_many :following, through: :active_relationships, source: :followed
+  has_many :followers, through: :passive_relationships, source: :follower
 
 
 
-  def follow(other_member)
-    active_relationships.create(following_id: other_member.id)
-  end
+    def follow(other_member)
+      active_relationships.create(following_id: other_member.id)
+    end
 
-  def unfollow(other_member)
-    active_relationships.find_by(following_id: other_member.id).destroy
-  end
+    def unfollow(other_member)
+      active_relationships.find_by(following_id: other_member.id).destroy
+    end
 
-  def following?(other_member)
-    following.include?(other_member)
-  end
+    def following?(other_member)
+      following.include?(other_member)
+    end
 
-  def follow(other_member)
-    active_relationships.create(followed_id: other_member.id)
-  end
 
- def unfollow(other_member)
-    active_relationships.find_by(followed_id: other_member.id).destroy
-  end
-  def following?(other_member)
-    following.include?(other_member)
-  end
+    def follow(other_member)
+      active_relationships.create(followed_id: other_member.id)
+    end
+
+   def unfollow(other_member)
+      active_relationships.find_by(followed_id: other_member.id).destroy
+    end
+    def following?(other_member)
+      following.include?(other_member)
+    end
+
+  has_many :likes
+  has_many :items
 
 end

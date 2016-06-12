@@ -1,0 +1,9 @@
+<% @member.following.each do |member| %>
+<table>
+<tr>
+  <td>  <%= member.name %> </td>
+  <td><%= link_to '詳細', member_path(member) %></td>
+</tr>
+
+</table>
+<% end %>

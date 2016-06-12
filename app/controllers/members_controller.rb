@@ -1,7 +1,7 @@
 class MembersController < ApplicationController
 	before_action :set_member, only: [:show, :edit, :update, :destroy]
 	# before_action :authenticate_member!
-  before_action :signed_in_member, only:[:index, :edit, :update, :destroy, :following, :followers]
+  # before_action :signed_in_member, only:[:index, :edit, :update, :destroy, :following, :followers]
 	def index
     @members = Member.order("id")
   	end

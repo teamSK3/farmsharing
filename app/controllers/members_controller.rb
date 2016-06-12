@@ -31,18 +31,16 @@ class MembersController < ApplicationController
 	    redirect_to :members, notice: "会員を削除しました。"
   	end
 
-    def following
+    def followings
       @title = "Following"
       @member = Member.find(params[:id])
-      @members = @member.following.paginate(page: params[:page])
-      render 'show_follow'
+      @members = @member.followings.paginate(page: params[:page])
     end
 
     def followers
       @title = "Followers"
       @member = Member.find(params[:id])
       @members = @member.followers.paginate(page: params[:page])
-      render 'show_follower'
     end
 
   	private

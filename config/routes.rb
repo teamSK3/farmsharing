@@ -25,8 +25,12 @@ end
     resource :likes, only: [:create, :destroy]
   end
   # get 'members/:action/:id' => 'members'
-  resources :members
-  resources :relationships, only: [:create, :destroy]
+  resources :members do
+    resource :relationships, only: [:create, :destroy]
+    get :followings, on: :member
+    get :followers, on: :member
+  end
+  
 
 
   # The priority is based upon order of creation: first created -> highest priority.

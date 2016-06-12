@@ -31,7 +31,15 @@
   <%= render 'shared/stats' %>
   </section>
 
-  <%= render 'follow_form' if member_signed_in? %>
+  <% if @member.followed_by?(current_member) %>
+    <%= link_to 'フォロー解除', member_relationships_path(@member), method: :delete %>
+  <% else %>
+    <%= link_to 'フォロー', member_relationships_path(@member), method: :post %>
+  <% end %>
+  
+  
+    
+  <%#= render 'follow_form' if member_signed_in? %>
 
 
 

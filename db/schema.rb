@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160526020358) do
+ActiveRecord::Schema.define(version: 20160530125035) do
 
   create_table "follows", force: :cascade do |t|
     t.integer  "member_id"
@@ -56,6 +56,10 @@ ActiveRecord::Schema.define(version: 20160526020358) do
     t.string   "unconfirmed_email"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "name"
+    t.string   "image"
+    t.integer  "sex"
+    t.date     "birthday"
   end
 
   add_index "members", ["email"], name: "index_members_on_email", unique: true
@@ -63,14 +67,14 @@ ActiveRecord::Schema.define(version: 20160526020358) do
 
   create_table "relationships", force: :cascade do |t|
     t.integer  "follower_id"
-    t.integer  "followed_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "following_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
-  add_index "relationships", ["followed_id"], name: "index_relationships_on_followed_id"
-  add_index "relationships", ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true
+  add_index "relationships", ["follower_id", "following_id"], name: "index_relationships_on_follower_id_and_following_id", unique: true
   add_index "relationships", ["follower_id"], name: "index_relationships_on_follower_id"
+  add_index "relationships", ["following_id"], name: "index_relationships_on_following_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "name"

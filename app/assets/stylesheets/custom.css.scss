@@ -80,8 +80,8 @@ p {
 .container ul li{
   font-color:red;
   font-size:15px;
-  text-decoration: underline;
-  font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+
 }
 .navbar-right li a{
   color: green !important;
@@ -124,6 +124,7 @@ footer ul li {
    position: relative;
    width:  100%; /* ボックスの横幅 */
    height: 580px; /* ボックスの高さ */
+   margin-left:-15px;
 }
 
 #slideshow p {
@@ -140,6 +141,7 @@ footer ul li {
 #slideshow p.active {
    z-index: 10;
    opacity: 1.0;
+   width:  110%; /* 画像の横幅 */
 }
 
 #slideshow p.last-active {
@@ -147,23 +149,31 @@ footer ul li {
 }
 
 #slideshow p img {
-   width:  100%; /* 画像の横幅 */
+   width:  110%; /* 画像の横幅 */
    height: 580px; /* 画像の高さ */
    display: block;
    border: 0;
    margin-bottom: 10px; /* 画像下部の余白 */
+   left:0;
 }
 
 #title {
    position: absolute;
    margin-top:-400px;
    z-index:11;
-   margin-left:18%;
+   margin-left:20%;
    text-align:center;
+}
+#title h1{
+    color:white;
 }
 #title h2{
     color:white;
     font-size:20px;
+}
+#title a{
+  background-color:#27ae60;
+  font-size:25px;
 }
 
 .container{
@@ -193,6 +203,20 @@ footer ul li {
 
 #about p{
   color:#27ae60;
+  font-size:20px;
+  line-height: 150%;
+  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+
+}
+
+.row img{
+  margin-left:30%;
+
+}
+
+#cross{
+  margin-top:50%;
+  margin-left:10%;
 }
 
 .contents_box1 p{
@@ -200,8 +224,6 @@ footer ul li {
    left: 200px;
    bottom: 250px;
    font-size:15px;
-   color:#27ae60;
-
 }
 
 .contents_box2 p{
@@ -209,11 +231,10 @@ footer ul li {
    left: 200px;
    bottom: 250px;
    font-size:15px;
-   color:#27ae60;
+
 
 }
 .contents_box3 p{
-   color:#27ae60;
 
   
 }

@@ -4,17 +4,16 @@ Rails.application.routes.draw do
   registrations: 'members/registrations'
 }
   root             'static_pages#home'
-  get 'items'    => 'items#index'
+  get 'items'   => 'items#index'
   get 'help'    => 'static_pages#help'
   get 'about'   => 'static_pages#about'
   get 'contact' => 'static_pages#contact'
   # get 'members/:action' => 'members'
   resources :items
-  resources :users do
-  collection do
-    get :tigers
-  end
-end
+
+
+
+
 
 
   # post 'items' =>  'likes#create'
@@ -30,7 +29,7 @@ end
     get :followings, on: :member
     get :followers, on: :member
   end
-  
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

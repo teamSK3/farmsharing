@@ -208,6 +208,9 @@ footer ul li {
   font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
 
 }
+#about #section1{
+  color:white;
+}
 
 .row img{
   margin-left:30%;
@@ -238,6 +241,13 @@ footer ul li {
 
   
 }
+.container .mokuji{
+  background: #F5F1E9 ; /* 背景色 */
+  color:#27ae60 !important; 
+  text-align:center;
+}
+
+
 /******************************
 
  ソーシャルエリア全体を囲む要素
@@ -359,3 +369,124 @@ ul.social-button-syncer li {
     display: none ;
   }
 }
+
+
+
+.container .profile{
+  text-align:center;
+}
+.container .profile img{
+  margin:0 auto;
+}
+
+.container .profile .mask1{
+  width:      400px;
+  height:     400px;
+  position:   absolute; /* 絶対位置指定 */
+  top:      0;
+  left:25px;
+  opacity:    0;  /* マスクを表示しない */
+  background-color: rgba(0,0,0,0.4);  /* マスクは半透明 */
+  -webkit-transition: all 0.2s ease;
+  transition:   all 0.2s ease;
+  font-size:20px;
+
+}
+.kuri:hover .mask1{
+  opacity:    1;  /* マスクを表示する */
+  border-radius: 100%;
+}
+.mask1{
+  padding-top:100px;
+  line-height:50px;
+  color:white !important;
+}
+
+.container .profile .mask2{
+  width:      400px;
+  height:     400px;
+  position:   absolute; /* 絶対位置指定 */
+  top:      0;
+  left:25px;
+  opacity:    0;  /* マスクを表示しない */
+  background-color: rgba(0,0,0,0.4);  /* マスクは半透明 */
+  -webkit-transition: all 0.2s ease;
+  transition:   all 0.2s ease;
+  font-size:20px;
+
+}
+.kota:hover .mask2{
+  opacity:    1;  /* マスクを表示する */
+  border-radius: 100%;
+}
+.mask2{
+  padding-top:100px;
+  line-height:50px;
+  color:white !important;
+}
+
+.container .profile .mask3{
+  width:      400px;
+  height:     400px;
+  position:   absolute; /* 絶対位置指定 */
+  top:      0;
+  left:25px;
+  opacity:    0;  /* マスクを表示しない */
+  background-color: rgba(0,0,0,0.4);  /* マスクは半透明 */
+  -webkit-transition: all 0.2s ease;
+  transition:   all 0.2s ease;
+  font-size:20px;
+
+}
+.taka:hover .mask3{
+  opacity:    1;  /* マスクを表示する */
+  border-radius: 100%;
+}
+.mask3{
+  padding-top:100px;
+  line-height:50px;
+  color:white !important;
+}
+.name1{
+  font-size:50px;
+}
+
+.cf:after{
+content:"";
+display:block;
+clear:both;
+}
+
+.cf ul li {
+display:block;
+float:left;
+list-style-type:none;
+background:#0cc;
+text-align:center;
+}
+
+.card {
+  width: 300px;
+  height: 200px;
+  margin:0 auto;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  taxt-align:center;
+}
+
+li:hover .card { -webkit-transform: rotateY(180deg); }
+
+li .face {
+  display: inline-block;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+}
+li .back {
+  width: 260px;
+  height: 160px;
+  -webkit-transform: rotateY(180deg);
+  background: #fff ;
+  padding:20px;
+}
+li .front { z-index: 10;}
+li:hover .front { z-index: 0;}

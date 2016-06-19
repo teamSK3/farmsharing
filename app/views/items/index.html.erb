@@ -1,76 +1,89 @@
 <p id="notice"><%= notice %></p>
-
+<div class="default-container">
 <h1>農産物　一覧</h1>
-<%= search_form_for @q do |f| %>
 
-  <%# start 特定の文字列で始まる商品名で検索 %>
-  <div class="field">
-    <%= f.label :name_cont, "商品名" %>
-    <%= f.text_field :name_cont %>
-    <br />
-
-    <%= f.label :count_lteq, "個数" %>
-    <%= f.text_field :count_lteq %>
-    <br />
-
-    <%= f.label :created_at_gteq, "投稿時間" %>
-    <%= f.text_field :created_at_gteq %>
-  </div>
-
-  
-  <%# 検索ボタン %>
-  <%= f.submit %>
-<% end %>
-
-
-<table>
-  <thead>
+<table class="search-table">
+  <%= search_form_for @q do |f| %>
     <tr>
-      <th>画像</th>
-      <th>カテゴリ</th>
-      <th>商品名</th>
-      <th>個数</th>
-      <th colspan="4"></th>
+      <td><%= f.label :name_cont, "商品名" %></td>
+      <td><%= f.text_field :name_cont %></td>
     </tr>
-  </thead>
+    <tr>
+      <td><%= f.label :count_lteq, "個数" %></td>
+      <td><%= f.text_field :count_lteq %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :created_at_gteq, "投稿時間" %></td>
+      <td><%= f.text_field :created_at_gteq %></td>
+    </tr>
+    <tr>
+      <td colspan="2"><%= f.submit %></td>
+    </tr>
+  <% end %>
+</table>
 
-  <tbody>
+
+  <div class="l-content">
+
+    
+  <div class="item-container ">
+  <div class="row">
+  
+  
+  
     <% @items.each do |item| %>
-      <tr>
-        <td colspan="3"><%= image_tag item.image_url %></td>
-      </tr>
-      <tr>
-        <td><%= item.category %></td>
-        <td><%= item.name %></td>
-        <td><%= item.count %></td>
-        <td>
-        <% if member_signed_in? %>
-          <% if item.like_member(current_member.id) %>
-            <%= link_to image_tag("redheart.png") , item_likes_path(item), id: "like-button", method: :delete %>
-            <span>
-              <%= item.likes.count %>
-            </span>
-          <% else %>
-            <%= link_to image_tag("grayheart.jpeg"), item_likes_path(item), id: "like-button", method: :post %>
+      <div class="col-md-4">
+        <figure class="items-box-photo">
+          <%= image_tag item.image_url , :size => '50x50'%>
+        </figure>
+
+        <div class="items-box-body">
+          <ul>
+            <li><%= item.category %></li>
+            <li><%= item.name %></li>
+            <li><%= item.count %></li>
+          </ul>
+        </div>
+        <div class="items-box-like">
+
+          <% if member_signed_in? %>
+            <% if item.like_member(current_member.id) %>
+              <%= link_to image_tag("redheart.png") , item_likes_path(item), id: "like-button", method: :delete ,:size => '10x10'%>
               <span>
                 <%= item.likes.count %>
               </span>
+            <% else %>
+              <%= link_to image_tag("grayheart.jpeg"), item_likes_path(item), id: "like-button", method: :post ,:size => '10x10'%>
+              <span>
+                <%= item.likes.count %>
+              </span>
+            <% end %>
+          <% else %>
+            <%= image_tag("grayheart.jpeg") %>
+            <span>
+              <%= item.likes.count %>
+            </span>
           <% end %>
-        <% else %>
-          <%= image_tag("grayheart.jpeg") %>
-          <span>
-            <%= item.likes.count %>
-          </span>
-        <% end %>
-        </td>
-                <td><%= link_to 'Show', item %></td>
-        <td><%= link_to 'Edit', edit_item_path(item) %></td>
-        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+
+        </div>
+        <div class="items-box-button">
+          <ul>
+             <li><%= link_to 'Show', item ,:style=>"color:green;" %></li>       
+             <li><%= link_to 'Edit', edit_item_path(item) ,:style=>"color:green;" %></li> 
+             <li><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } ,:style=>"color:green;" %></li>
+          </ul>
+        </div>  
+      </div>            
     <% end %>
-  </tbody>
-</table>
 
-<br>
+  
+  
+  </div>
+  </div>
 
-<%= link_to 'New Item', new_item_path %>
+  </div>
+
+
+<%= link_to 'New Item', new_item_path ,:style=>"color:green;" %>
+</div>
+</div>

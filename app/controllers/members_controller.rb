@@ -34,15 +34,14 @@ class MembersController < ApplicationController
     def followings
       @title = "Following"
       @member = Member.find(params[:id])
-      @members = @member.followings.paginate(page: params[:page])
-      render 'show_follow'
+      # @members = @member.followings.paginate(page: params[:page])
     end
 
     def followers
       @title = "Followers"
       @member = Member.find(params[:id])
-      @members = @member.followers.paginate(page: params[:page])
-      render 'show_follow'
+      # @members = @member.followers.paginate(page: params[:page])
+      # render 'show_follow'
     end
 
   	private

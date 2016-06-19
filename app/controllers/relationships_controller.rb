@@ -12,7 +12,7 @@ class RelationshipsController < ApplicationController
 
 	def destroy
 		@member = Member.find(params[:member_id])
-		@follow = current_member.passive_relationships.find_by!(follower_id: @member.id)
+		@follow = current_member.active_relationships.find_by!(following_id: @member.id)
 		@follow.destroy
 		redirect_to member_path(@member), notice: "フォロー解除しました"
 	end

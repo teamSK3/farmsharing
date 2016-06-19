@@ -4,7 +4,7 @@
     <section class="member_info">
       <%= image_tag @member.image_url%>
       <h1><%= @member.name %></h1>
-      <span><%= link_to "view my profile", @member %></span>
+      <span><%= link_to "マイページへ", @member %></span>
     </section>
     <section class="stats">
       <%= render 'shared/stats' %>
@@ -23,6 +23,7 @@
     <h3><%= @title %></h3>
     <% if @members.any? %>
       <ul class="members follow">
+      <%#render @members %>
       </ul>
       <%= will_paginate %>
     <% end %>

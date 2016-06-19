@@ -1,0 +1,32 @@
+<% provide(:title, @title) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="member_info">
+      <%= image_tag @member.image_url%>
+      <h1><%= @member.name %></h1>
+      <span><%= link_to "マイページへ", @member %></span>
+    </section>
+    <section class="stats">
+      <%= render 'shared/stats' %>
+      <% if @members.any? %>
+        <div class="member_avatars">
+          <% @members.each do |member| %>
+            <a href ="<%=member_path(@member) %>">
+            <%= image_tag member.image%>
+            </a>
+          <% end %>
+        </div>
+      <% end %>
+    </section>
+  </aside>
+  <div class="col-md-8">
+    <h3><%= @title %></h3>
+    <% if @members.any? %>
+      <ul class="members follow">
+      <%#render @members %>
+      </ul>
+      <%= will_paginate %>
+    <% end %>
+  </div>
+</div>
+

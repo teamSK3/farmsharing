@@ -1,0 +1,10 @@
+<% @member.followings.each do |member| %>
+<table>
+<tr>
+  <td>  <%= member.name %> </td>
+  <td>  <%= member.email %> </td>
+  <td><%= link_to '詳細', member_path(member) %></td>
+</tr>
+
+</table>
+<% end %>

@@ -1,6 +1,7 @@
 class MembersController < ApplicationController
 	before_action :set_member, only: [:show, :edit, :update, :destroy]
-	before_action :authenticate_member!
+	# before_action :authenticate_member!
+  # before_action :signed_in_member, only:[:index, :edit, :update, :destroy, :following, :followers]
 	def index
     @members = Member.order("id")
   	end
@@ -22,13 +23,27 @@ class MembersController < ApplicationController
     	else
       render "edit"
   		end
-	end
+	   end
 
   	def destroy
 	    @member = Member.find(params[:id])
 	    @member.destroy
 	    redirect_to :members, notice: "会員を削除しました。"
   	end
+
+    def followings
+      @title = "Following"
+      @member = Member.find(params[:id])
+      # @members = @member.followings.paginate(page: params[:page])
+    end
+
+    def followers
+      @title = "Followers"
+      @member = Member.find(params[:id])
+      # @members = @member.followers.paginate(page: params[:page])
+      # render 'show_follow'
+    end
+
   	private
     # Use callbacks to share common setup or constraints between actions.
     def set_member

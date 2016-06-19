@@ -1,3 +1,4 @@
+
 <% unless current_member(@member) %>
   <div id="follow_form">
   <% if current_member.following?(@member) %>
@@ -7,3 +8,19 @@
   <% end %>
   </div>
 <% end %>
+<%# unless current_member? (@member) %>
+	  <div id="follow_form">
+	  	<% if current_member.following?(@member) %>
+	    	<%= render 'unfollow' %>
+	  	<% else %>
+	    	<%#= render 'follow' %>
+	  <% end %>
+	 </div>
+
+	  <%= form_for(current_member.active_relationships.build) do |f| %>
+	  <div><%= hidden_field_tag :following_id, @member.id %></div>
+	  <%= f.submit "Follow", class: "btn btn-primary" %>
+	<% end %>
+
+<%# end %>
+

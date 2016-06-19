@@ -8,7 +8,13 @@ Rails.application.routes.draw do
   get 'help'    => 'static_pages#help'
   get 'about'   => 'static_pages#about'
   get 'contact' => 'static_pages#contact'
-  
+  # get 'members/:action' => 'members'
+  resources :items
+
+
+
+
+
 
   # post 'items' =>  'likes#create'
 
@@ -18,7 +24,13 @@ Rails.application.routes.draw do
     resource :likes, only: [:create, :destroy]
   end
   # get 'members/:action/:id' => 'members'
-  resources :members
+  resources :members do
+    resource :relationships, only: [:create, :destroy]
+    get :followings, on: :member
+    get :followers, on: :member
+  end
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

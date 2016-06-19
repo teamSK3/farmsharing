@@ -1,16 +1,17 @@
+<script type="text/javascript" src="application.js"></script>
+
 	   <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
-        <%= link_to "Farm Sharing", root_path, id: "logo" %>
+        <%= link_to image_tag("icon", :size => "100x60"), root_path, id: "logo" %>
         <nav>
           <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "Home",   root_path %></li>
-            <li><%= link_to "items",   items_path %></li>
-            <li><%= link_to "members", members_path %></li>
-            <li><%= link_to "Help",   help_path %></li>
-            <li><%= link_to "About",   about_path %></li>
-            <li><%= link_to "Contact", contact_path %></li>
-            <li><%= link_to "Log in", new_member_session_path %></li>
+            <li><a href="#section1">About</a></li>
+            <li><%= link_to "商品検索",   items_path %></li>
+            <li><%= link_to "投稿者", members_path %></li>
+            <li><%= link_to "ヘルプ",   help_path %></li>
+            <li><%= link_to "運営", contact_path %></li>
+            <li><%= link_to "ホームへ",   root_path %></li>
+            <li><%= link_to "ログイン", new_member_session_path %></li>
           </ul>
         </nav>
-      </div>
     </header>

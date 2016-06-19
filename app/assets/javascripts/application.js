@@ -59,3 +59,16 @@ document.getElementsByTagName("head")[0].appendChild(scriptTag);
 //},5000);	//ページを開いて5秒後(5,000ミリ秒後)にシェアボタンを読み込む
 
 }
+
+//スムーススクロール
+$(function(){
+	var headerHight = 70;
+   $('a[href^=#]').click(function() {
+      var speed = 500;
+      var href= $(this).attr("href");
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      var position = target.offset().top-headerHight;
+      $('body,html').animate({scrollTop:position}, speed, 'swing');
+      return false;
+   });
+});

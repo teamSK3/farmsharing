@@ -27,14 +27,12 @@ function slideSwitch() {
 }
 
 $(function() {
-   setInterval( "slideSwitch()", 2100 );
+   setInterval( "slideSwitch()", 4200 );
 });
 </script>
 </head>
 <body>
-  <% if member_signed_in? %>
-    <p><%= link_to "ログアウト", destroy_member_session_path, method: :delete %></p>
-  <% end %>
+
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 <nav>
@@ -55,6 +53,9 @@ $(function() {
     <div class="container">
 		<%= yield %>
 		 <%= render 'layouts/footer' %>
+     <% if member_signed_in? %>
+    <p><%= link_to "ログアウト", destroy_member_session_path, method: :delete %></p>
+  <% end %>
 	</div>
 </body>
 </html>

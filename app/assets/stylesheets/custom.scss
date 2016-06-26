@@ -1,3 +1,20 @@
+.col-md-4{
+      border-style:solid;
+      background-color:rgb(236, 201, 157);
+      display:inline;
+      height:300px;
+      margin-left:20px;
+      margin: 20px 15px 20px 15px;
+      float:left;
+}
+.membername {
+  font-family: sans-serif;
+}
+
+.member_image img{
+  margin-left: -30%;
+  border-radius: 30px;
+}
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -79,12 +96,14 @@ p {
   padding-right:450px;
 
 
+
+
 }
 .container ul li{
   font-color:red;
   font-size:15px;
-  text-decoration: underline;
-  font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+
 }
 .navbar-right li a{
   color: green !important;
@@ -120,6 +139,7 @@ p {
    position: relative;
    width:  100%; /* ボックスの横幅 */
    height: 580px; /* ボックスの高さ */
+   margin-left:-15px;
 }
 
 #slideshow p {
@@ -136,6 +156,7 @@ p {
 #slideshow p.active {
    z-index: 10;
    opacity: 1.0;
+   width:  110%; /* 画像の横幅 */
 }
 
 #slideshow p.last-active {
@@ -143,28 +164,37 @@ p {
 }
 
 #slideshow p img {
-   width:  100%; /* 画像の横幅 */
+   width:  110%; /* 画像の横幅 */
    height: 580px; /* 画像の高さ */
    display: block;
    border: 0;
    margin-bottom: 10px; /* 画像下部の余白 */
+   left:0;
 }
 
 #title {
    position: absolute;
    margin-top:-400px;
    z-index:11;
-   margin-left:18%;
+   margin-left:20%;
    text-align:center;
+}
+#title h1{
+    color:white;
 }
 #title h2{
     color:white;
     font-size:20px;
 }
+#title a{
+  background-color:#27ae60;
+  font-size:25px;
+}
 
 .container{
   background-color:white;
   width:100%;
+
   .default-container{
     
     padding-top: 45px;
@@ -181,6 +211,8 @@ p {
       }
     }
   }
+
+
 }
 .contents_box1{
    border-top: 1px solid $gray-medium-light;
@@ -205,6 +237,23 @@ p {
 
 #about p{
   color:#27ae60;
+  font-size:20px;
+  line-height: 150%;
+  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+
+}
+#about #section1{
+  color:white;
+}
+
+.row img{
+  margin-left:30%;
+
+}
+
+#cross{
+  margin-top:50%;
+  margin-left:10%;
 }
 
 .contents_box1 p{
@@ -212,8 +261,6 @@ p {
    left: 200px;
    bottom: 250px;
    font-size:15px;
-   color:#27ae60;
-
 }
 
 .contents_box2 p{
@@ -221,15 +268,23 @@ p {
    left: 200px;
    bottom: 250px;
    font-size:15px;
-   color:#27ae60;
+
 
 }
 .contents_box3 p{
-   color:#27ae60;
 
   
 
 }
+
+
+.container .mokuji{
+  background: #F5F1E9 ; /* 背景色 */
+  color:#27ae60 !important; 
+  text-align:center;
+}
+
+
 
 /******************************
 
@@ -353,11 +408,53 @@ ul.social-button-syncer li {
   }
 }
 .field{
+}
   
+
+
+
+
+.container .profile{
   text-align:center;
 }
+.container .profile img{
+  margin:0 auto;
+}
 
+.container .profile .mask1{
+  width:      400px;
+  height:     400px;
+  position:   absolute; /* 絶対位置指定 */
+  top:      0;
+  left:25px;
+  opacity:    0;  /* マスクを表示しない */
+  background-color: rgba(0,0,0,0.4);  /* マスクは半透明 */
+  -webkit-transition: all 0.2s ease;
+  transition:   all 0.2s ease;
+  font-size:20px;
 
+}
+.kuri:hover .mask1{
+  opacity:    1;  /* マスクを表示する */
+  border-radius: 100%;
+}
+.mask1{
+  padding-top:100px;
+  line-height:50px;
+  color:white !important;
+}
+
+.container .profile .mask2{
+  width:      400px;
+  height:     400px;
+  position:   absolute; /* 絶対位置指定 */
+  top:      0;
+  left:25px;
+  opacity:    0;  /* マスクを表示しない */
+  background-color: rgba(0,0,0,0.4);  /* マスクは半透明 */
+  -webkit-transition: all 0.2s ease;
+  transition:   all 0.2s ease;
+  font-size:20px;
 
 .l-content {
   display: inline-block;
@@ -409,6 +506,42 @@ ul.social-button-syncer li {
   height:30px;
   padding-left: 200px;
   padding-bottom: 20px;
+
+}
+.kota:hover .mask2{
+  opacity:    1;  /* マスクを表示する */
+  border-radius: 100%;
+}
+.mask2{
+  padding-top:100px;
+  line-height:50px;
+  color:white !important;
+}
+
+.container .profile .mask3{
+  width:      400px;
+  height:     400px;
+  position:   absolute; /* 絶対位置指定 */
+  top:      0;
+  left:25px;
+  opacity:    0;  /* マスクを表示しない */
+  background-color: rgba(0,0,0,0.4);  /* マスクは半透明 */
+  -webkit-transition: all 0.2s ease;
+  transition:   all 0.2s ease;
+  font-size:20px;
+
+}
+.taka:hover .mask3{
+  opacity:    1;  /* マスクを表示する */
+  border-radius: 100%;
+}
+.mask3{
+  padding-top:100px;
+  line-height:50px;
+  color:white !important;
+}
+.name1{
+  font-size:50px;
 }
 #like-button :hover{
   color: white　!important;
@@ -438,5 +571,43 @@ ul.social-button-syncer li {
   color:#FF3333;
   font-size: 25px;
 }
+.cf:after{
+content:"";
+display:block;
+clear:both;
+}
+
+.cf ul li {
+display:block;
+float:left;
+list-style-type:none;
+background:#0cc;
+text-align:center;
+}
+
+.card {
+  width: 300px;
+  height: 200px;
+  margin:0 auto;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  taxt-align:center;
+}
+
+.cf li:hover .card { -webkit-transform: rotateY(180deg); }
 
 
+.cf li .face {
+  display: inline-block;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+}
+.cf li .back {
+  width: 260px;
+  height: 160px;
+  -webkit-transform: rotateY(180deg);
+  background: #fff ;
+  padding:20px;
+}
+.cf li .front { z-index: 10;}
+.cf li:hover .front { z-index: 1;}

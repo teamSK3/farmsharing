@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_member!
 
   # GET /items
   # GET /items.json
@@ -28,6 +29,7 @@ class ItemsController < ApplicationController
   def create
     params.permit!
      @item = Item.new(params[:item])
+     @item.member_id = current_member.id
     if @item.save
       redirect_to @item, notice: "商品を投稿しました。"
     else
@@ -82,7 +84,7 @@ class ItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:item).permit(:category, :name, :image, :count)
+      params.require(:item).permit(:category, :name, :image, :count ,:member_id)
     end
 end
 

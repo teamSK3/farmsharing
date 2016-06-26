@@ -1,3 +1,13 @@
+
+<% unless current_member(@member) %>
+  <div id="follow_form">
+  <% if current_member.following?(@member) %>
+    <%= render 'unfollow' %>
+  <% else %>
+    <%= render 'follow' %>
+  <% end %>
+  </div>
+<% end %>
 <%# unless current_member? (@member) %>
 	  <div id="follow_form">
 	  	<% if current_member.following?(@member) %>
@@ -13,3 +23,4 @@
 	<% end %>
 
 <%# end %>
+

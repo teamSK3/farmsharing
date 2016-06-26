@@ -36,6 +36,10 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    acts_in_relation (0.2.2)
+      caller_class
+      rails
+      verbs
     arel (6.0.3)
     bcrypt (3.1.11)
     binding_of_caller (0.7.2)
@@ -46,6 +50,8 @@ GEM
       will_paginate
     builder (3.2.2)
     byebug (9.0.4)
+    byebug (9.0.5)
+    caller_class (0.0.1)
     carrierwave (0.11.2)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
@@ -173,6 +179,9 @@ GEM
     uglifier (3.0.0)
       execjs (>= 0.3.0, < 3)
     unicode-display_width (0.1.1)
+    verbs (2.1.4)
+      activesupport (>= 2.3.4)
+      i18n
     warden (1.2.6)
       rack (>= 1.0)
     web-console (2.3.0)
@@ -186,6 +195,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts_in_relation
   bootstrap-sass (= 3.2.0.0)
   bootstrap-will_paginate (= 0.0.10)
   byebug

@@ -27,6 +27,11 @@
 
     
   <div class="item-container ">
+  <div class="new-item-button">
+  <button class="button1" type="submit">
+  <%= link_to '新規投稿', new_item_path ,:style=>"color:green;" %>
+  </button>
+  </div>
   <div class="row">
   
   
@@ -34,26 +39,38 @@
     <% @items.each do |item| %>
       <div class="col-md-4">
         <figure class="items-box-photo">
-          <%= image_tag item.image_url , :size => '50x50'%>
+          <%= image_tag item.image_url %>
         </figure>
 
         <div class="items-box-body">
           <ul>
             <li><%= item.category %></li>
             <li><%= item.name %></li>
-            <li><%= item.count %></li>
+            <li><%= item.count %>個</li>
           </ul>
         </div>
+        <div class="items-box-button">
+          <ul>
+             <li><%= link_to 'Show', item %></li>       
+             <li><%= link_to 'Edit', edit_item_path(item)  %></li> 
+             <li><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+          </ul>
+        </div>
+
         <div class="items-box-like">
 
           <% if member_signed_in? %>
             <% if item.like_member(current_member.id) %>
-              <%= link_to image_tag("redheart.png") , item_likes_path(item), id: "like-button", method: :delete ,:size => '10x10'%>
+              <%= link_to item_likes_path(item), id: "like-button", method: :delete do %>
+                <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+              <% end %>
               <span>
                 <%= item.likes.count %>
               </span>
             <% else %>
-              <%= link_to image_tag("grayheart.jpeg"), item_likes_path(item), id: "like-button", method: :post ,:size => '10x10'%>
+              <%= link_to item_likes_path(item), id: "like-button", method: :post do %>
+              <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+              <% end %>
               <span>
                 <%= item.likes.count %>
               </span>
@@ -66,13 +83,7 @@
           <% end %>
 
         </div>
-        <div class="items-box-button">
-          <ul>
-             <li><%= link_to 'Show', item ,:style=>"color:green;" %></li>       
-             <li><%= link_to 'Edit', edit_item_path(item) ,:style=>"color:green;" %></li> 
-             <li><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } ,:style=>"color:green;" %></li>
-          </ul>
-        </div>  
+        
       </div>            
     <% end %>
 
@@ -84,6 +95,6 @@
   </div>
 
 
-<%= link_to 'New Item', new_item_path ,:style=>"color:green;" %>
+
 </div>
 </div>

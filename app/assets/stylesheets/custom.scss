@@ -36,9 +36,10 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
-  color:#40d47e;
+  color:#009900;
 
 }
+
 
 h2 {
   font-size: 1.2em;
@@ -76,7 +77,8 @@ p {
 .container ul {
   margin-top:10px;
   padding-right:450px;
-  
+
+
 }
 .container ul li{
   font-color:red;
@@ -90,35 +92,28 @@ p {
   background-color: #40d47e !important;
   }
 }
+.member-container{
+  margin-top:45px;
+  width: 100%;
+  height: 100%;
+}
+.item-container{
+  width: 100%;
+  height: 100%;
+  background-color:#EEEEEE;
+}
 
 
 /* footer */
-
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid $gray-medium-light;
-  color: black;
-  a {
-  color: black;
-  &:hover {
-  color: white;
-  }
-}
-}
-
-footer small {
-  float: left;
-}
-
-footer ul {
-  float: right;
-  list-style: none;
-}
-
-footer ul li {
-  float: left;
-  margin-left: 15px;
+.c-footer{
+  background-color: #2B3A3F;
+  color:#BABDBF;
+  padding-top: 70px;
+    padding-right: 12.5%;
+    padding-bottom: 30px;
+    padding-left: 12.5%;
+    width:1280px;
+    height:626;
 }
 
 #slideshow {
@@ -171,7 +166,8 @@ footer ul li {
   background-color:white;
   width:100%;
   .default-container{
-      padding-top: 30px;
+    
+    padding-top: 45px;
   }
   table.search-table{
     text-align: center;
@@ -232,7 +228,9 @@ footer ul li {
    color:#27ae60;
 
   
+
 }
+
 /******************************
 
  ソーシャルエリア全体を囲む要素
@@ -355,7 +353,7 @@ ul.social-button-syncer li {
   }
 }
 .field{
-  background-color:red;
+  
   text-align:center;
 }
 
@@ -363,34 +361,82 @@ ul.social-button-syncer li {
 
 .l-content {
   display: inline-block;
+  width: 100%;
+  height: 100%;
+
 }
 
+.new-item-button{
+  text-align: center;
+  width:100%;
+  height:20%;
+  
+  
+
+}
 .row{
   margin-left: 150px;
-  width:100%;
+  margin-right: 150px;
   height:100%;
+  text-align: center;
 
 }
 .col-md-4{
-      border-style:solid;
-      background-color:red;
+      background-color:#FFFFBB;
       display:inline;
-      height:300px;
-      margin-left:20px;
-      margin: 20px 15px 20px 15px;
+      height:430px;
+      width:285px;
+      margin: 20px 10px 20px 10px;
       float:left;
+      box-shadow:5px 5px;
+      border:1px solid #000
 }
 .items-box-photo{
+  position: relative;
   
-  
-  
+
 }
-.items-box-like{
-  width:10px;
-  height:10px;
+.items-box-photo img {
+  width: 270px;
+  height: 270px;
+
 }
 
-.items-box-body{
-  white-space: nowrap;
+
+.items-box-like{
+  text-align: center;
+  width:30px;
+  height:30px;
+  padding-left: 200px;
+  padding-bottom: 20px;
 }
+#like-button :hover{
+  color: white　!important;
+
+}
+.items-box-body{
+  float: left;
+  white-space: nowrap;
+  width:175px;
+  height:90px;
+}
+
+.items-box-body li{
+  list-style: none;
+}
+.items-box-button{
+  text-align: center;
+  width:90px;
+  height:90px;
+
+}
+.items-box-button li{
+  list-style: none;
+
+}
+.glyphicon {
+  color:#FF3333;
+  font-size: 25px;
+}
+
 

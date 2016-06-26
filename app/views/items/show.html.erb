@@ -1,26 +1,32 @@
 <% provide(:title, "商品表示") %>
 <p id="notice"><%= notice %></p>
+ <table class="attr">
 
-<p>
-  <strong>Category:</strong>
-  <%= @item.category %>
-</p>
+<tr><
+  <th>Category:</th>
+  <td><%= @item.category %></td>
+</tr>
 
-<p>
-  <strong>Name:</strong>
-  <%= @item.name %>
-</p>
+<tr>
+  <th>Name:</th>
+  <td><%= @item.name %></td>
+</tr>
 
-<p>
-  <strong>Image:</strong>
+<tr>
+  <th>Image:</th>
 
-	<%= image_tag @item.image_url %>
-</p>
+	<td><%= image_tag @item.image_url %></td>
+</tr>
 
-<p>
-  <strong>Count:</strong>
-  <%= @item.count %>
-</p>
+<tr>
+  <th>Count:</th>
+  <td><%= @item.count %></td>
+</tr>
+
+<tr>
+  <th>生産者:</th>
+  <td><%= link_to @item.member.name, member_path(@item.member.id) %></td>
+</tr>
 
 <%= link_to 'Edit', edit_item_path(@item) %> |
 <%= link_to 'Back', items_path %>

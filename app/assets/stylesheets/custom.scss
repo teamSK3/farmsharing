@@ -373,12 +373,18 @@ ul.social-button-syncer li {
 }
 .col-md-4{
       border-style:solid;
-      background-color:red;
+      background-color:rgb(236, 201, 157);
       display:inline;
       height:300px;
       margin-left:20px;
       margin: 20px 15px 20px 15px;
       float:left;
+}
+.membername {
+  font-family: sans-serif;
+}
+.member_image a{
+  border-radius: 30px;
 }
 .items-box-photo{
   

@@ -22,11 +22,15 @@
           </div>
     </td>
       <td><%= member.birthday %></td>
-      <td><%= member.sex %></td>
-      <td>
+      <% if member.sex == 0 %>
+        <td>男</td>
+        <% else %>
+        <td>女</td>
+      <% end %>
+
+      <% if current_member.id == member.id %>
         <%= link_to "編集", [:edit, member] %> |
-        <%= link_to "削除", member, method: :delete,
-              data: { confirm: "本当に削除しますか?" } %>
+      <% end %>
       </td>
     </tr>
     <% end %>

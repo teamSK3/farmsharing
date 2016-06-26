@@ -28,9 +28,6 @@
     
   <div class="item-container ">
   <div class="row">
-  
-  
-  
     <% @items.each do |item| %>
       <div class="col-md-4">
         <figure class="items-box-photo">
@@ -68,16 +65,16 @@
         </div>
         <div class="items-box-button">
           <ul>
-             <li><%= link_to 'Show', item ,:style=>"color:green;" %></li>       
-             <li><%= link_to 'Edit', edit_item_path(item) ,:style=>"color:green;" %></li> 
+             <li><%= link_to 'Show', item ,:style=>"color:green;" %></li>
+             <li><%= link_to 'Edit', edit_item_path(item) ,:style=>"color:green;" %></li>
              <li><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } ,:style=>"color:green;" %></li>
           </ul>
-        </div>  
-      </div>            
+        </div>
+      </div>
     <% end %>
 
-  
-  
+
+
   </div>
   </div>
 

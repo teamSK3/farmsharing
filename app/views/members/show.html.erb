@@ -49,7 +49,9 @@
       </div>
 
         <div class="col-md-8">
-          <%= @member.items %>
+          <% @member.items.each do |item| %>
+            <p><%= item.name %></p>
+          <% end %>
         </div>
     </div>
 </div>

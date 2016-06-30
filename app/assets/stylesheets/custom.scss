@@ -92,34 +92,30 @@ p
     color: white;
 }
 
-/* header *s/
 
-#logo
-{
-    font-size: 1.7em;
-    font-weight: bold;
-
-    float: left;
-
-    margin-right: 10px;
-    margin-left: 180px;
-    padding-top: 9px;
-
-    letter-spacing: -1px;
-    text-transform: uppercase;
-
-    color: white;
-    &:hover
-    {
-        text-decoration: none;
-
-        color: white;
-    }
+/* header */
+.navbar-fixed-top{
+  margin-top:-20px;
 }
-.container ul
-{
-    margin-top: 10px;
-    padding-right: 450px;
+#logo {
+  float: left;
+  margin-right: 50px;
+  margin-left:160px;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  &:hover {
+  color: white;
+  text-decoration: none;
+  }
+}
+.container ul {
+  margin-top:10px;
+  padding-right:400px;
+
 }
 .container ul li
 {
@@ -329,6 +325,11 @@ footer ul li
 
     color: #27ae60 !important;
     background: #f5f1e9 ; /* 背景色 */
+}
+
+.loginname{
+  position:relative;
+  z-index:10;
 }
 
 

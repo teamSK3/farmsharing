@@ -39,7 +39,7 @@ $(function() {
 
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-<nav>
+<nav class="loginname">
     <!-- user_signed_in? はユーザがログインしているか調べるdeviseのHelperメソッド -->
     <% if member_signed_in? %>
       <!-- current_user は現在ログインしているUserオブジェクトを返すdeviseのHelperメソッド -->
@@ -52,7 +52,7 @@ $(function() {
       <%= link_to "サインイン", new_member_registration_path %> |
       <%= link_to "ログイン", new_member_session_path %>
     <% end %>
-  </nav>
+</nav>
 	<%= render 'layouts/header' %>
     <div class="container">
 		<%= yield %>

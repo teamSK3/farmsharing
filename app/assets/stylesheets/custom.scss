@@ -1,22 +1,20 @@
-.col-md-4{
-      border-style:solid;
-      background-color:rgb(236, 201, 157);
-      display:inline;
-      height:300px;
-      margin-left:20px;
-      margin: 20px 15px 20px 15px;
-      float:left;
-}
-.membername {
-  font-family: sans-serif;
+.col-md-4
+{
+    display: inline;
+    float: left;
+
+    height: 300px;
+    margin: 20px 15px 20px 15px;
+    margin-left: 20px;
+
+    border-style: solid;
+    background-color: rgb(236, 201, 157);
 }
 
-.member_image img{
-  margin-left: -30%;
-  border-radius: 30px;
-}
-@import "bootstrap-sprockets";
-@import "bootstrap";
+
+
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
 
 /* mixins, variables, etc. */
 
@@ -26,59 +24,83 @@ $gray-medium-light: #eaeaea;
 
 
 
-section {
-  overflow: auto;
+section
+{
+    overflow: auto;
 }
 
-textarea {
-  resize: vertical;
+textarea
+{
+    resize: vertical;
 }
 
-.center {
-  text-align: center;
-  margin-top:70px;
+.center
+{
+    margin-top: 70px;
+
+    text-align: center;
 }
-h1 {
-  margin-bottom: 10px;
+h1
+{
+    margin-bottom: 10px;
 }
 
 /* typography */
 
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+    line-height: 1;
 }
 
-h1 {
-  font-size: 4em;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
-  text-align: center;
-  color:#40d47e;
+h1
+{
+    font-size: 4em;
 
+    margin-bottom: 30px;
+
+    text-align: center;
+    letter-spacing: -2px;
+
+    color: #40d47e;
 }
 
-h2 {
-  font-size: 1.2em;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
-  text-align: center;
-  font-weight: normal;
-  color: red;
+h2
+{
+    font-size: 1.2em;
+    font-weight: normal;
+
+    margin-bottom: 30px;
+
+    text-align: center;
+    letter-spacing: -1px;
+
+    color: red;
 }
 
-p {
-  font-size: 1.1em;
-  line-height: 1.7em;
-  color:white;
-  text-align: center;
+p
+{
+    font-size: 1.1em;
+    line-height: 1.7em;
+
+    text-align: center;
+
+    color: white;
 }
+
 
 /* header */
-
+.navbar-fixed-top{
+  margin-top:-20px;
+}
 #logo {
   float: left;
-  margin-right: 10px;
-  margin-left:180px;
+  margin-right: 50px;
+  margin-left:160px;
   font-size: 1.7em;
   color: white;
   text-transform: uppercase;
@@ -92,176 +114,222 @@ p {
 }
 .container ul {
   margin-top:10px;
-  padding-right:450px;
-}
-.container ul li{
-  font-color:red;
-  font-size:15px;
-  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+  padding-right:400px;
 
 }
-.navbar-right li a{
-  color: green !important;
-  &:hover {
-  background-color: #40d47e !important;
-  }
+.container ul li
+{
+    font-family: 'ヒラギノ丸ゴ Pro W4','ヒラギノ丸ゴ Pro','Hiragino Maru Gothic Pro','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','HG丸ｺﾞｼｯｸM-PRO','HGMaruGothicMPRO';
+    font-size: 15px;
+
+    font-color: red;
+}
+.navbar-right li a
+{
+    color: green !important;
+    &:hover
+    {
+        background-color: #40d47e !important;
+    }
 }
 
 
 /* footer */
 
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid $gray-medium-light;
-  color: black;
-  a {
-  color: black;
-  &:hover {
-  color: white;
-  }
-}
+footer
+{
+    margin-top: 45px;
+    padding-top: 5px;
+
+    color: black;
+    border-top: 1px solid $gray-medium-light;
+    a
+    {
+        color: black;
+        &:hover
+        {
+            color: white;
+        }
+    }
 }
 
-footer small {
-  float: left;
+footer small
+{
+    float: left;
 }
 
-footer ul {
-  float: right;
-  list-style: none;
+footer ul
+{
+    float: right;
+
+    list-style: none;
 }
 
-footer ul li {
-  float: left;
-  margin-left: 15px;
+footer ul li
+{
+    float: left;
+
+    margin-left: 15px;
 }
 
-#slideshow {
-   position: relative;
-   width:  100%; /* ボックスの横幅 */
-   height: 580px; /* ボックスの高さ */
-   margin-left:-15px;
+#slideshow
+{
+    position: relative;
+
+    width: 100%; /* ボックスの横幅 */
+    height: 580px; /* ボックスの高さ */
+    margin-left: -15px;
 }
 
-#slideshow p {
-   position: absolute;
-   top:  0;
-   left: 0;
-   z-index: 8;
-   opacity: 0.0;
-   margin: 0;
-   background-color: green; /* ボックスの背景色(必須) */
-   height: 300px; /* ボックスの高さ */
+#slideshow p
+{
+    position: absolute;
+    z-index: 8;
+    top: 0;
+    left: 0;
+
+    height: 300px; /* ボックスの高さ */
+    margin: 0;
+
+    opacity: .0;
+    background-color: green; /* ボックスの背景色(必須) */
 }
 
-#slideshow p.active {
-   z-index: 10;
-   opacity: 1.0;
-   width:  110%; /* 画像の横幅 */
+#slideshow p.active
+{
+    z-index: 10;
+
+    width: 110%; /* 画像の横幅 */
+
+    opacity: 1.0;
 }
 
-#slideshow p.last-active {
-   z-index: 9;
+#slideshow p.last-active
+{
+    z-index: 9;
 }
 
-#slideshow p img {
-   width:  110%; /* 画像の横幅 */
-   height: 580px; /* 画像の高さ */
-   display: block;
-   border: 0;
-   margin-bottom: 10px; /* 画像下部の余白 */
-   left:0;
+#slideshow p img
+{
+    left: 0;
+
+    display: block;
+
+    width: 110%; /* 画像の横幅 */
+    height: 580px; /* 画像の高さ */
+    margin-bottom: 10px; /* 画像下部の余白 */
+
+    border: 0;
 }
 
-#title {
-   position: absolute;
-   margin-top:-400px;
-   z-index:11;
-   margin-left:20%;
-   text-align:center;
+#title
+{
+    position: absolute;
+    z-index: 11;
+
+    margin-top: -400px;
+    margin-left: 20%;
+
+    text-align: center;
 }
-#title h1{
-    color:white;
+#title h1
+{
+    color: white;
 }
-#title h2{
-    color:white;
-    font-size:20px;
+#title h2
+{
+    font-size: 20px;
+
+    color: white;
 }
-#title a{
-  background-color:#27ae60;
-  font-size:25px;
+#title a
+{
+    font-size: 25px;
+
+    background-color: #27ae60;
 }
 
-.container{
-  background-color:white;
-  width:100%;
-}
-.contents_box1{
-   border-top: 1px solid $gray-medium-light;
-   padding-top: 35px;
+.container
+{
+    width: 100%;
 
+    background-color: white;
 }
-.contents_box2{
-   border-top: 1px solid $gray-medium-light;
-   padding-top: 35px;
+.contents_box1
+{
+    padding-top: 35px;
 
+    border-top: 1px solid $gray-medium-light;
 }
-.contents_box1 img{
+.contents_box2
+{
+    padding-top: 35px;
+
+    border-top: 1px solid $gray-medium-light;
+}
+.contents_box1 img
+{
+    position: relative;
+    top: 50px;
+    left: 20px;
+}
+.contents_box2 img
+{
+    position: relative;
+    top: 50px;
+    left: 20px;
+}
+
+#about p
+{
+    font-family: 'ヒラギノ丸ゴ Pro W4','ヒラギノ丸ゴ Pro','Hiragino Maru Gothic Pro','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','HG丸ｺﾞｼｯｸM-PRO','HGMaruGothicMPRO';
+    font-size: 20px;
+    line-height: 150%;
+
+    color: #27ae60;
+}
+#about #section1
+{
+    color: white;
+}
+
+
+
+#cross
+{
+    margin-top: 50%;
+    margin-left: 10%;
+}
+
+.contents_box1 p
+{
+    font-size: 15px;
+
+    position: relative;
+    bottom: 250px;
+    left: 200px;
+}
+
+.contents_box2 p
+{
+    font-size: 15px;
+
+    position: relative;
+    bottom: 250px;
+    left: 200px;
+}
+
+.container .mokuji
+{
+    text-align: center;
+
+    color: #27ae60 !important;
+    background: #f5f1e9 ; /* 背景色 */
+}
+
+.loginname{
   position:relative;
-  left: 20px;
-  top: 50px;
-}
-.contents_box2 img{
-  position:relative;
-  left: 20px;
-  top: 50px;
-}
-
-#about p{
-  color:#27ae60;
-  font-size:20px;
-  line-height: 150%;
-  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
-
-}
-#about #section1{
-  color:white;
-}
-
-.row img{
-  margin-left:30%;
-
-}
-
-#cross{
-  margin-top:50%;
-  margin-left:10%;
-}
-
-.contents_box1 p{
-   position:relative;
-   left: 200px;
-   bottom: 250px;
-   font-size:15px;
-}
-
-.contents_box2 p{
-   position:relative;
-   left: 200px;
-   bottom: 250px;
-   font-size:15px;
-
-
-}
-.contents_box3 p{
-
-  
-}
-.container .mokuji{
-  background: #F5F1E9 ; /* 背景色 */
-  color:#27ae60 !important; 
-  text-align:center;
+  z-index:10;
 }
 
 
@@ -271,18 +339,22 @@ footer ul li {
  * 他のコンテンツと距離を取りたい場合は[margin]を設定して下さい
 
 ******************************/
-.social-area-syncer {
-  width: 100% ;
-  min-height: 190px ;
-  background: #F5F1E9 ; /* 背景色 */
-  padding: 1.5em 0 ;
+.social-area-syncer
+{
+    width: 100% ;
+    min-height: 190px ;
+    padding: 1.5em 0 ;
+
+    background: #f5f1e9 ; /* 背景色 */
 }
 
 /* デスクトップPCでは高さを拡張する */
-@media screen and ( min-width:480px ) {
-  .social-area-syncer {
-    min-height: 119px ;
-  }
+@media screen and ( min-width:480px )
+{
+    .social-area-syncer
+    {
+        min-height: 119px ;
+    }
 }
 
 
@@ -292,19 +364,24 @@ footer ul li {
 
 ******************************/
 /* スマホ */
-ul.social-button-syncer {
-  width: 238px ;
-  margin: 24px auto ;
-  padding: 0 ;
-  border: none ;
-  list-style-type: none ;
+ul.social-button-syncer
+{
+    width: 238px ;
+    margin: 24px auto ;
+    padding: 0 ;
+
+    list-style-type: none ;
+
+    border: none ;
 }
 
 /* デスクトップ */
-@media screen and ( min-width:480px ) {
-  ul.social-button-syncer {
-    width: 410px ;
-  }
+@media screen and ( min-width:480px )
+{
+    ul.social-button-syncer
+    {
+        width: 410px ;
+    }
 }
 
 
@@ -313,12 +390,15 @@ ul.social-button-syncer {
  [li]要素
 
 ******************************/
-ul.social-button-syncer li {
-  float: left ;
-  text-align: center ;
-  height: 71px ;
-  margin: 0 8px ;
-  padding:0 ;
+ul.social-button-syncer li
+{
+    float: left ;
+
+    height: 71px ;
+    margin: 0 8px ;
+    padding: 0 ;
+
+    text-align: center ;
 }
 
 
@@ -328,183 +408,251 @@ ul.social-button-syncer li {
 
 ******************************/
 /* [Twitter] */
-.sc-tw {
-  width: 71px ;
+.sc-tw
+{
+    width: 71px ;
 }
 
-.sc-tw svg {
-  width: 30px ;
-  height: 30px ;
- }
-
-.sc-tw a {
-  height: 56px ;
-  margin: 0 auto ;
-  padding-top: 6px ;
-  display: block ;
-  background: #1B95E0 ;
-  font-size: 12px ;
-  color: #fff ;
-  font-weight: 700 ;
-  text-decoration: none ;
-  letter-spacing: .5px ;
-  border-radius: 2px ;
+.sc-tw svg
+{
+    width: 30px ;
+    height: 30px ;
 }
 
-.sc-tw a:hover {
-  color: #fff ;
-  background: #0c7abf ;
+.sc-tw a
+{
+    font-size: 12px ;
+    font-weight: 700 ;
+
+    display: block ;
+
+    height: 56px ;
+    margin: 0 auto ;
+    padding-top: 6px ;
+
+    text-decoration: none ;
+    letter-spacing: .5px ;
+
+    color: #fff ;
+    border-radius: 2px ;
+    background: #1b95e0 ;
 }
 
-.sc-tw span:before {
-  white-space: pre ;
-  content: '\A' ;
+.sc-tw a:hover
+{
+    color: #fff ;
+    background: #0c7abf ;
+}
+
+.sc-tw span:before
+{
+    content: '\A' ;
+    white-space: pre ;
 }
 
 /* [Facebook] */
-.sc-fb {
-  z-index: 99 ;
-  width: 69px ;
+.sc-fb
+{
+    z-index: 99 ;
+
+    width: 69px ;
 }
 
 /* [LINE] */
-.sc-li {
-  width: 50px ;
+.sc-li
+{
+    width: 50px ;
 }
 
-.sc-li-img {
-  border: none ;
-  margin: 0 auto ;
-  padding:0 ;
-  width: 36px ;
-  height: 60px ;
+.sc-li-img
+{
+    width: 36px ;
+    height: 60px ;
+    margin: 0 auto ;
+    padding: 0 ;
+
+    border: none ;
 }
 
 /* デスクトップPCではLINEボタンを表示しない */
-@media screen and ( min-width:480px ) {
-  .sc-li {
-    display: none ;
-  }
+@media screen and ( min-width:480px )
+{
+    .sc-li
+    {
+        display: none ;
+    }
 }
 
 
 
-.container .profile{
-  text-align:center;
+.container .profile
+{
+    text-align: center;
 }
-.container .profile img{
-  margin:0 auto;
-}
-
-.container .profile .mask1{
-  width:      400px;
-  height:     400px;
-  position:   absolute; /* 絶対位置指定 */
-  top:      0;
-  left:25px;
-  opacity:    0;  /* マスクを表示しない */
-  background-color: rgba(0,0,0,0.4);  /* マスクは半透明 */
-  -webkit-transition: all 0.2s ease;
-  transition:   all 0.2s ease;
-  font-size:20px;
-
-}
-.kuri:hover .mask1{
-  opacity:    1;  /* マスクを表示する */
-  border-radius: 100%;
-}
-.mask1{
-  padding-top:100px;
-  line-height:50px;
-  color:white !important;
+.container .profile img
+{
+    margin: 0 auto;
 }
 
-.container .profile .mask2{
-  width:      400px;
-  height:     400px;
-  position:   absolute; /* 絶対位置指定 */
-  top:      0;
-  left:25px;
-  opacity:    0;  /* マスクを表示しない */
-  background-color: rgba(0,0,0,0.4);  /* マスクは半透明 */
-  -webkit-transition: all 0.2s ease;
-  transition:   all 0.2s ease;
-  font-size:20px;
+.container .profile .mask1
+{
+    font-size: 20px;
 
-}
-.kota:hover .mask2{
-  opacity:    1;  /* マスクを表示する */
-  border-radius: 100%;
-}
-.mask2{
-  padding-top:100px;
-  line-height:50px;
-  color:white !important;
-}
+    position: absolute; /* 絶対位置指定 */
+    top: 0;
+    left: 25px;
 
-.container .profile .mask3{
-  width:      400px;
-  height:     400px;
-  position:   absolute; /* 絶対位置指定 */
-  top:      0;
-  left:25px;
-  opacity:    0;  /* マスクを表示しない */
-  background-color: rgba(0,0,0,0.4);  /* マスクは半透明 */
-  -webkit-transition: all 0.2s ease;
-  transition:   all 0.2s ease;
-  font-size:20px;
+    width: 400px;
+    height: 400px;
 
+    -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+
+    opacity: 0;  /* マスクを表示しない */
+    background-color: rgba(0,0,0,.4);  /* マスクは半透明 */
 }
-.taka:hover .mask3{
-  opacity:    1;  /* マスクを表示する */
-  border-radius: 100%;
+.kuri:hover .mask1
+{
+    opacity: 1;  /* マスクを表示する */
+    border-radius: 100%;
 }
-.mask3{
-  padding-top:100px;
-  line-height:50px;
-  color:white !important;
-}
-.name1{
-  font-size:50px;
+.mask1
+{
+    line-height: 50px;
+
+    padding-top: 100px;
+
+    color: white !important;
 }
 
-.cf:after{
-content:"";
-display:block;
-clear:both;
+.container .profile .mask2
+{
+    font-size: 20px;
+
+    position: absolute; /* 絶対位置指定 */
+    top: 0;
+    left: 25px;
+
+    width: 400px;
+    height: 400px;
+
+    -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+
+    opacity: 0;  /* マスクを表示しない */
+    background-color: rgba(0,0,0,.4);  /* マスクは半透明 */
+}
+.kota:hover .mask2
+{
+    opacity: 1;  /* マスクを表示する */
+    border-radius: 100%;
+}
+.mask2
+{
+    line-height: 50px;
+
+    padding-top: 100px;
+
+    color: white !important;
 }
 
-.cf ul li {
-display:block;
-float:left;
-list-style-type:none;
-background:#0cc;
-text-align:center;
+.container .profile .mask3
+{
+    font-size: 20px;
+
+    position: absolute; /* 絶対位置指定 */
+    top: 0;
+    left: 25px;
+
+    width: 400px;
+    height: 400px;
+
+    -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+
+    opacity: 0;  /* マスクを表示しない */
+    background-color: rgba(0,0,0,.4);  /* マスクは半透明 */
+}
+.taka:hover .mask3
+{
+    opacity: 1;  /* マスクを表示する */
+    border-radius: 100%;
+}
+.mask3
+{
+    line-height: 50px;
+
+    padding-top: 100px;
+
+    color: white !important;
+}
+.name1
+{
+    font-size: 50px;
 }
 
-.card {
-  width: 300px;
-  height: 200px;
-  margin:0 auto;
-  -webkit-transform-style: preserve-3d;
-  -webkit-transition: 0.5s;
-  taxt-align:center;
+.cf:after
+{
+    display: block;
+    clear: both;
+
+    content: '';
 }
 
-li:hover .card { -webkit-transform: rotateY(180deg); }
+.cf ul li
+{
+    display: block;
+    float: left;
+
+    list-style-type: none;
+
+    text-align: center;
+
+    background: #0cc;
+}
+
+.card
+{
+    width: 300px;
+    height: 200px;
+    margin: 0 auto;
+
+    -webkit-transition: .5s;
+
+    -webkit-transform-style: preserve-3d;
+    taxt-align: center;
+}
+
+li:hover .card
+{
+    -webkit-transform: rotateY(180deg);
+}
 
 
-li .face {
-  display: inline-block;
-  position: absolute;
-  -webkit-backface-visibility: hidden;
+li .face
+{
+    position: absolute;
+
+    display: inline-block;
+
+    -webkit-backface-visibility: hidden;
 }
-li .back {
-  width: 260px;
-  height: 160px;
-  -webkit-transform: rotateY(180deg);
-  background: #fff ;
-  padding:20px;
+li .back
+{
+    width: 260px;
+    height: 160px;
+    padding: 20px;
+
+    -webkit-transform: rotateY(180deg);
+
+    background: #fff ;
 }
-li .front { z-index: 10;}
-li:hover .front { z-index: 0;}
+li .front
+{
+    z-index: 10;
+}
+li:hover .front
+{
+    z-index: 0;
+}
+

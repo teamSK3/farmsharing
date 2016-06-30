@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
   <title><%= full_title(yield(:title)) %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application' %>
@@ -30,12 +33,13 @@ $(function() {
    setInterval( "slideSwitch()", 4200 );
 });
 </script>
+
 </head>
 <body>
 
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-<nav>
+<nav class="loginname">
     <!-- user_signed_in? はユーザがログインしているか調べるdeviseのHelperメソッド -->
     <% if member_signed_in? %>
       <!-- current_user は現在ログインしているUserオブジェクトを返すdeviseのHelperメソッド -->
@@ -48,14 +52,14 @@ $(function() {
       <%= link_to "サインイン", new_member_registration_path %> |
       <%= link_to "ログイン", new_member_session_path %>
     <% end %>
-  </nav>
+</nav>
 	<%= render 'layouts/header' %>
     <div class="container">
 		<%= yield %>
 		 <%= render 'layouts/footer' %>
-     <% if member_signed_in? %>
-    <p><%= link_to "ログアウト", destroy_member_session_path, method: :delete %></p>
-  <% end %>
+  
 	</div>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
 </body>
 </html>

@@ -74,11 +74,13 @@ p {
 }
 
 /* header */
-
+.navbar-fixed-top{
+  margin-top:-20px;
+}
 #logo {
   float: left;
-  margin-right: 10px;
-  margin-left:180px;
+  margin-right: 50px;
+  margin-left:160px;
   font-size: 1.7em;
   color: white;
   text-transform: uppercase;
@@ -92,7 +94,7 @@ p {
 }
 .container ul {
   margin-top:10px;
-  padding-right:450px;
+  padding-right:400px;
 }
 .container ul li{
   font-color:red;
@@ -262,6 +264,11 @@ footer ul li {
   background: #F5F1E9 ; /* 背景色 */
   color:#27ae60 !important; 
   text-align:center;
+}
+
+.loginname{
+  position:relative;
+  z-index:10;
 }
 
 

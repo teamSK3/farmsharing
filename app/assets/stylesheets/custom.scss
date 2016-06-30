@@ -10,17 +10,9 @@
     border-style: solid;
     background-color: rgb(236, 201, 157);
 }
-.membername
-{
-    font-family: sans-serif;
-}
 
-.member_image img
-{
-    margin-left: -30%;
 
-    border-radius: 30px;
-}
+
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
@@ -305,10 +297,7 @@ footer ul li
     color: white;
 }
 
-.row img
-{
-    margin-left: 30%;
-}
+
 
 #cross
 {
@@ -665,3 +654,4 @@ li:hover .front
 {
     z-index: 0;
 }
+

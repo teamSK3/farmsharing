@@ -213,10 +213,7 @@ footer ul li {
   color:white;
 }
 
-.row img{
-  margin-left:30%;
 
-}
 
 #cross{
   margin-top:50%;
@@ -492,3 +489,39 @@ li .back {
 }
 li .front { z-index: 10;}
 li:hover .front { z-index: 0;}
+
+
+
+.member-box th {
+  width: 100px;
+}
+.edit-prof{
+  margin-right: 20px;
+}
+.post-item{
+  margin-left: 300px;
+  font-weight: bold;
+  margin-bottom: 60px;
+}
+.member-box{
+  border:1px blue bold;
+
+
+  border-radius: 20px;
+}
+.postitem_image img{
+  width:100px;
+  height:100px;
+}
+.post-item-box{
+  float:left;
+}
+.post-item-wrap{
+  width:100%;
+  height:100%;
+}
+.prof-wrap{
+  width: 100%;
+  height: 100%;
+
+}

@@ -1,41 +1,45 @@
 <%  page_title = "会員一覧" %>
-<h1><%=  page_title %></h1>
+<h1 style="text-align: center; font-family: fantasy; color: #ef821e"><%=  page_title %></h1>
 
-<div class ="container">
-    <% if @members.present? %>
-      <table class="table">
+<div class ="member-index">
+  <% if @members.present? %>
+    <table class="list">
+      <tr>
+        <th><span class="member-name">名前</span></th>
+        <th>生年月日</th>
+        <th>性別</th>
+      </tr>
+
+      <% @members.each do |member| %>
+
         <tr>
-          <th>名前</th>
-          <th>生年月日</th>
-          <th>性別</th>
-        </tr>
-          <% @members.each do |member| %>
-        <tr>
-        <td>
-         <div class="media">
-              <a class="media-left" >
-              <%= image_tag member.image_url%>
-              </a>
-          </div>
-          <div class="media-body">
-                <%= link_to member.name, member %>
-          </div>
-        </td>
-        <td><%= member.birthday %></td>
-          <% if member.sex == 0 %>
-          <td>男</td>
-            <% else %>
-          <td>女</td>
-          <% end %>
-          <td>
-          <% if current_member.id == member.id %>
-            <%= link_to "編集", [:edit, member] %> |
-          <% end %>
+          <td class="member-name">
+               <span class="m-img"><%= image_tag member.image_url%></span>
+
+              <span><%= link_to member.name, member %></span>
+
           </td>
+
+
+          <td><%= member.birthday %></td>
+
+          <% if member.sex == 0 %>
+                <td>男</td>
+                  <% else %>
+                <td>女</td>
+              <% end %>
+
+          <!--  <td>
+              <% if current_member.id == member.id %>
+                <%= link_to "編集", [:edit, member] %>
+              <% end %>
+          </td> -->
         </tr>
-        <% end %>
-      </table>
-    <% else %>
-    <p>会員情報がありません。</p>
+
     <% end %>
+  </table>
+    <% else %>
+      <p>会員情報がありません。</p>
+    <% end %>
+
 </div>

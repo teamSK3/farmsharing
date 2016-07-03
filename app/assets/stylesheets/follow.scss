@@ -1,0 +1,34 @@
+#follow{
+	background-color: #efecdb;
+}
+.follow_wrapper{
+	height: 3000px;
+	
+}
+
+ 
+.page-header h4 a{
+	color: blue;
+	margin-left: 30px;
+}
+.block {
+    padding: 20px;
+    background: #fff;
+    border: 4px #66cdaa solid;
+    position: relative;
+    z-index: 10;
+}
+.block:before {
+    content: "";
+    position: absolute;
+    background: #fff;
+    margin: 3px;
+    border: 2px #7accb0 solid;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    z-index: -10;
+ }
+ 

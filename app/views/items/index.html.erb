@@ -1,33 +1,86 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Items</h1>
+<h1>商品一覧</h1>
+<div class="back-button">
+<span class="glyphicon glyphicon-search" aria-hidden="true" style="font-weight:bold;">　商品検索</span>
+</div>
+        <table class="search-table">
+          <%= search_form_for @q do |f| %>
+            <tr>
+              <td><%= f.label :name_cont, "商品名" %></td>
+              <td><%= f.text_field :name_cont %></td>
+            </tr>
+            <tr>
+              <td><%= f.label :count_lteq, "個数" %></td>
+              <td><%= f.text_field :count_lteq %></td>
+            </tr>
+            <tr>
+              <td><%= f.label :created_at_gteq, "投稿時間" %></td>
+              <td><%= f.text_field :created_at_gteq %></td>
+            </tr>
+            <tr>
+              <td colspan="2"><%= f.submit %></td>
+            </tr>
+          <% end %>
+        </table>
 
-<table>
-  <thead>
-    <tr>
-      <th>Category</th>
-      <th>Name</th>
-      <th>Image</th>
-      <th>Count</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+          <div class="new-item-box">
+              <%= link_to '新規投稿', new_item_path  %>
+          </div>
 
-  <tbody>
-    <% @items.each do |item| %>
-      <tr>
-        <td><%= item.category %></td>
-        <td><%= item.name %></td>
-        <td><%= item.image %></td>
-        <td><%= item.count %></td>
-        <td><%= link_to 'Show', item %></td>
-        <td><%= link_to 'Edit', edit_item_path(item) %></td>
-        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
+          <div class="item-container">
+            <div class="row">
+              <% @items.each do |item| %>
+                <div class="col-md-4">
+                  
+                  <div class="items-box-photo">
+                    <%= image_tag item.image_url %>
+                  </div>
 
-<%= link_to 'New Item', new_item_path %>
+                  <div class="items-box-body">
+                      <ul>
+                        <li><%= item.category %></li>
+                        <li><%= item.name %></li>
+                        <li><%= item.count %>個</li>
+                        <li><%= item.member.name %></li>
+                      </ul>
+                  </div>
+
+                  <div class="items-box-button">
+                      <ul>
+                        <li><%= link_to '詳細ページへ', item %></li>
+                      </ul>
+                  </div>
+
+                  <div class="items-box-like">
+                        <% if member_signed_in? %>
+                          <% if item.like_member(current_member.id) %>
+                            <%= link_to item_likes_path(item), id: "like-button", method: :delete  do %>
+                              <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                               <% end %>
+                              <span>
+                               <%= item.likes.count %>
+                              </span>
+                        <% else %>
+                            <%= link_to item_likes_path(item), id: "like-button", method: :post do %>
+                            <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                            <% end %>
+                            <span>
+                              <%= item.likes.count %>
+                            </span>
+                          <% end %>
+                        <% else %>
+                          <%= image_tag("grayheart.jpeg") %>
+                          <span>
+                            <%= item.likes.count %>
+                          </span>
+                        <% end %>
+                  </div>
+
+                </div>
+              <% end %>
+            </div>
+          </div>
+
+

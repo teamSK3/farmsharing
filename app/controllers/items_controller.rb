@@ -1,15 +1,18 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_member!
 
   # GET /items
   # GET /items.json
   def index
-    @items = Item.all
+    @q     = Item.search(params[:q])
+    @items = @q.result(distinct: true)
   end
 
   # GET /items/1
   # GET /items/1.json
   def show
+    @item = Item.find(params[:id])
   end
 
   # GET /items/new
@@ -24,7 +27,15 @@ class ItemsController < ApplicationController
   # POST /items
   # POST /items.json
   def create
-    @item = Item.new(item_params)
+    params.permit!
+     @item = Item.new(params[:item])
+     @item.member_id = current_member.id
+    if @item.save
+      redirect_to @item, notice: "商品を投稿しました。"
+    else
+      render "new"
+    end
+  end
 
     respond_to do |format|
       if @item.save
@@ -35,10 +46,11 @@ class ItemsController < ApplicationController
         format.json { render json: @item.errors, status: :unprocessable_entity }
       end
     end
-  end
+
 
   # PATCH/PUT /items/1
   # PATCH/PUT /items/1.json
+  
   def update
     respond_to do |format|
       if @item.update(item_params)
@@ -50,10 +62,13 @@ class ItemsController < ApplicationController
       end
     end
   end
+  
 
   # DELETE /items/1
   # DELETE /items/1.json
   def destroy
+    params.permit!
+    @item =Item.find(params[:id])
     @item.destroy
     respond_to do |format|
       format.html { redirect_to items_url, notice: 'Item was successfully destroyed.' }
@@ -69,6 +84,7 @@ class ItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:item).permit(:category, :name, :image, :count)
+      params.require(:item).permit(:category, :name, :image, :count ,:member_id)
     end
 end
+

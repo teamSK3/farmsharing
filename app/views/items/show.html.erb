@@ -1,24 +1,37 @@
+<% provide(:title, "商品表示") %>
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Category:</strong>
-  <%= @item.category %>
-</p>
+<%= link_to '編集', edit_item_path(@item) %> |
+<%= link_to '戻る', items_path %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @item.name %>
-</p>
+<div class="items-show-box">
+    <div class="row">
 
-<p>
-  <strong>Image:</strong>
-  <%= @item.image %>
-</p>
+        <div class="col-lg-6 items-show-photo">
+              <a><%= image_tag @item.image_url %></a>
+        </div>
+        <div class="col-lg-4 items-show-w">
+            <ul>
+              <li>カテゴリー:</li>
+              <li>商品名:</li>
+              <li>個数:</li>
+              <li>生産者:</li>
+            </ul>
+        </div>
 
-<p>
-  <strong>Count:</strong>
-  <%= @item.count %>
-</p>
+        <div class="col-lg-4 items-show-w">
+            <ul> 
+              <li><%= @item.category %></li>
+              <li><%= @item.name %></li>
+              <li><%= @item.count %></li>
+              <li><%= link_to @item.member.name, member_path(@item.member.id) %></li>
 
-<%= link_to 'Edit', edit_item_path(@item) %> |
-<%= link_to 'Back', items_path %>
+                <% if current_member.id == @item.member.id %>
+                    <li><%= link_to '編集', edit_item_path(@item)  %></li>
+                    <li><%= link_to '削除', @item, method: :delete, data: { confirm: '削除してもよろしいですか？' }  %></li>
+                <% end %>
+            </ul>
+        </div>
+    </div>
+</div>
+

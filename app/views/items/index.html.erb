@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>農産物　一覧</h1>
+<h1>商品一覧</h1>
 <div class="back-button">
-<%= link_to "商品検索ページへ戻る",   items_path %>
+<span class="glyphicon glyphicon-search" aria-hidden="true" style="font-weight:bold;">　商品検索</span>
 </div>
         <table class="search-table">
           <%= search_form_for @q do |f| %>
@@ -50,8 +50,6 @@
                   <div class="items-box-button">
                       <ul>
                         <li><%= link_to '詳細ページへ', item %></li>
-                        <li><%= link_to '編集', edit_item_path(item)  %></li>
-                        <li><%= link_to '削除', item, method: :delete, data: { confirm: '削除してもよろしいですか？' }  %></li>
                       </ul>
                   </div>
 

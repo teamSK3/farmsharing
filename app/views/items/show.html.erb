@@ -10,7 +10,7 @@
         <div class="col-lg-6 items-show-photo">
               <a><%= image_tag @item.image_url %></a>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-4 items-show-w">
             <ul>
               <li>カテゴリー:</li>
               <li>商品名:</li>
@@ -19,12 +19,17 @@
             </ul>
         </div>
 
-        <div class="col-lg-4">
+        <div class="col-lg-4 items-show-w">
             <ul> 
               <li><%= @item.category %></li>
               <li><%= @item.name %></li>
               <li><%= @item.count %></li>
               <li><%= link_to @item.member.name, member_path(@item.member.id) %></li>
+
+                <% if current_member.id == @item.member.id %>
+                    <li><%= link_to '編集', edit_item_path(@item)  %></li>
+                    <li><%= link_to '削除', @item, method: :delete, data: { confirm: '削除してもよろしいですか？' }  %></li>
+                <% end %>
             </ul>
         </div>
     </div>

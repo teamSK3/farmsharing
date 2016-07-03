@@ -53,7 +53,8 @@
                <button type="button" class="btn btn-primary"><%= link_to 'フォロー', member_relationships_path(@member), method: :post %>
                </button>
               <% end %>
-              <a href="<%= members_path %>" class="btn btn-success btn-mini"><i class="icon-white icon-user"></i>投稿者一覧へ</a>
+              <a href="<%= members_path %>" class="btn btn-success btn-mini"><i class="icon-white icon-user"></i>投稿者一覧</a>
+              <a href="<%= new_item_path %>" class="btn btn-warning btn-mini"><i class="icon-white icon-user"></i>商品投稿</a>
 
             </table>
         </div>
@@ -80,7 +81,7 @@
                             </div>
                             <div class="media-body">
                               <h4 class="media-heading postitem-name">
-                                <%= item.name %>
+                                <%= link_to item.name, item %>
                               </h4>
                             </div>
                           </div>

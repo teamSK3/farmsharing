@@ -85,7 +85,7 @@ p {
 }
 .container ul {
   margin-top:10px;
-  padding-right:370px;
+  padding-right:220px;
 }
 .container ul li{
   padding-left:10px;
@@ -495,3 +495,26 @@ ul.social-button-syncer li {
   opacity: 1;
 }
 
+
+
+
+.abcd img{
+  margin-left:30%;
+}
+
+.login-wrap{
+    background-image: image-url("nou.jpg");
+    background-size:cover;
+    height:600px;
+}
+.login-name{
+  font-size:65px;
+  color:white;
+  padding-top:5%;
+  padding-left:40%;
+
+}
+.login-box{
+  margin-top:10%;
+  margin-left:43%;
+}

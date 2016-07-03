@@ -39,26 +39,13 @@ $(function() {
 
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-<nav class="loginname">
-    <!-- user_signed_in? はユーザがログインしているか調べるdeviseのHelperメソッド -->
-    <% if member_signed_in? %>
-      <!-- current_user は現在ログインしているUserオブジェクトを返すdeviseのHelperメソッド -->
-      <!-- *_path はUserモデルを作成したときに、
-        deviseにより自動で作成されてますので、rake routesで確認できます -->
-        ログイン名：<strong><%= current_member.name %></strong>. 
-      <%= link_to 'プロフィール変更', edit_member_registration_path,:style=>"color:black;"  %> |
-      <%= link_to "ログアウト", destroy_member_session_path, method: :delete,:style=>"color:black;" %>
-    <% else %>
-      <%= link_to "サインイン", new_member_registration_path %> |
-      <%= link_to "ログイン", new_member_session_path %>
-    <% end %>
-</nav>
-	<%= render 'layouts/header' %>
+
+  <%= render 'layouts/header' %>
     <div class="container">
-		<%= yield %>
-		 <%= render 'layouts/footer' %>
+    <%= yield %>
+     <%= render 'layouts/footer' %>
   
-	</div>
+  </div>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 </body>

@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)http://localhost:3000/items -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Farmsharing</title>
+  <link rel="stylesheet" media="all" href="./Farmsharing_files/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css" data-turbolinks-track="true">
+<link rel="stylesheet" media="all" href="./Farmsharing_files/custom.self-6f2f7579e1dc09a265d1ba76cd405be12b8e5960acf0fbe8854c13b88b8ccb6b.css" data-turbolinks-track="true">
+<link rel="stylesheet" media="all" href="./Farmsharing_files/items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" data-turbolinks-track="true">
+<link rel="stylesheet" media="all" href="./Farmsharing_files/members.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" data-turbolinks-track="true">
+<link rel="stylesheet" media="all" href="./Farmsharing_files/relationships.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" data-turbolinks-track="true">
+<link rel="stylesheet" media="all" href="./Farmsharing_files/scaffolds.self-46a67b55e5c738996020846051098e05aa3fc25b52a80f602cb0de37171329a1.css" data-turbolinks-track="true">
+<link rel="stylesheet" media="all" href="./Farmsharing_files/static_pages.self-2ebfe20922c5c3ea18b564fd59b8eba0b75519edbd472abba2d9e79eea247707.css" data-turbolinks-track="true">
+<link rel="stylesheet" media="all" href="./Farmsharing_files/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" data-turbolinks-track="true">
+  <script id="facebook-jssdk" src="./Farmsharing_files/sdk.js"></script><script src="./Farmsharing_files/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js"></script>
+<script src="./Farmsharing_files/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js"></script>
+<script src="./Farmsharing_files/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js"></script>
+<script src="./Farmsharing_files/members.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js"></script>
+<script src="./Farmsharing_files/relationships.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js"></script>
+<script src="./Farmsharing_files/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js"></script>
+<script src="./Farmsharing_files/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js"></script>
+<script src="./Farmsharing_files/application.self-c66f6978bdde012cb8dedf75af0a671ee1540f7ddb9adb7a3b3939ca53845435.js"></script>
+  <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="SRmrWfHkNm+/KZr2+FD3Ka3HIueDk2ItcaTjt7JzjruG2pEq4Q8w0fiHfmDex1pv8U5w2O61p3quCXdDRKseJA==">
+        <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+      </script>
+    <![endif]-->
+
+  <script type="text/javascript" src="./Farmsharing_files/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript">
+function slideSwitch() {
+   var $active = $('#slideshow p.active');
+
+   if ( $active.length == 0 ) $active = $('#slideshow p:last');
+
+   var $next =  $active.next().length ? $active.next()
+      : $('#slideshow p:first');
+
+   $active.addClass('last-active');
+
+   $next.css({opacity: 0.0})
+      .addClass('active')
+      .animate({opacity: 1.0}, 1000, function() {
+         $active.removeClass('active last-active');
+      });
+}
+
+$(function() {
+   setInterval( "slideSwitch()", 4200 );
+});
+</script>
+<script type="text/javascript" src="./Farmsharing_files/platform.js" async="" gapi_processed="true"></script><script type="text/javascript" src="./Farmsharing_files/bookmark_button.js" async=""></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, "hiragino kaku gothic pro",meiryo,"ms pgothic",sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v2/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style></head>
+<body>
+
+  <p class="notice">Item was successfully destroyed.</p>
+  <p class="alert"></p>
+<nav>
+    <!-- user_signed_in? はユーザがログインしているか調べるdeviseのHelperメソッド -->
+      <!-- current_user は現在ログインしているUserオブジェクトを返すdeviseのHelperメソッド -->
+      <!-- *_path はUserモデルを作成したときに、
+        deviseにより自動で作成されてますので、rake routesで確認できます -->
+        ログイン名：<strong>wwwww</strong>. 
+      <a style="color:black;" href="http://localhost:3000/members/edit">プロフィール変更</a> |
+      <a style="color:black;" rel="nofollow" data-method="delete" href="http://localhost:3000/members/sign_out">ログアウト</a>
+  </nav>
+	<script type="text/javascript" src="./Farmsharing_files/application.js"></script>
+
+	   <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <a id="logo" href="http://localhost:3000/"><img src="./Farmsharing_files/icon-1dd9a76b76653c058b047b1bee123139e33852fd807e1566ebacb86ffe95ba87.png" alt="Icon 1dd9a76b76653c058b047b1bee123139e33852fd807e1566ebacb86ffe95ba87" width="100" height="60"></a>
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://localhost:3000/items#section1">About</a></li>
+            <li><a href="http://localhost:3000/items">商品検索</a></li>
+            <li><a href="http://localhost:3000/members">投稿者</a></li>
+            <li><a href="http://localhost:3000/help">ヘルプ</a></li>
+            <li><a href="http://localhost:3000/contact">運営</a></li>
+            <li><a href="http://localhost:3000/">ホームへ</a></li>
+            <li><a href="http://localhost:3000/members/sign_in">ログイン</a></li>
+          </ul>
+        </nav>
+    </div></header>
+    <div class="container">
+		<p id="notice">Item was successfully destroyed.</p>
+
+<h1>農産物　一覧</h1>
+<div class="item-ponpon">
+        <table class="search-table">
+          <form class="item_search" id="item_search" action="http://localhost:3000/items" accept-charset="UTF-8" method="get"></form><input name="utf8" type="hidden" value="✓">
+            <tbody><tr>
+              <td><label for="q_name_cont">商品名</label></td>
+              <td><input type="text" name="q[name_cont]" id="q_name_cont"></td>
+            </tr>
+            <tr>
+              <td><label for="q_count_lteq">個数</label></td>
+              <td><input type="text" name="q[count_lteq]" id="q_count_lteq"></td>
+            </tr>
+            <tr>
+              <td><label for="q_created_at_gteq">投稿時間</label></td>
+              <td><input type="text" name="q[created_at_gteq]" id="q_created_at_gteq"></td>
+            </tr>
+            <tr>
+              <td colspan="2"><input type="submit" name="commit" value="Search"></td>
+            </tr>
+        </tbody></table>
+
+
+
+
+  
+
+          <div class="new-item-button">
+                <button class="button1" type="submit">
+                <a style="color:green;" href="http://localhost:3000/items/new">新規投稿</a>
+                </button>
+          </div>
+
+      <div class="row moto">
+              
+          <div class="col-lg-3 sky">
+
+                <div class="items-box-photo">
+                  <img src="./Farmsharing_files/20160518101333.jpg" alt="20160518101333">
+                </div>
+
+            <div class="items-box-body">
+                    <ul>
+                      <li class="hiro">野菜</li>
+                      <li class="hiro">ジャガイモ</li>
+                      <li class="hiro">12</li>
+                    </ul>
+            </div>
+
+            <div class="items-box-button">
+                      <ul>
+                         <li class="cha"><a href="http://localhost:3000/items/2">Show</a></li>
+                         <li class="cha"><a href="http://localhost:3000/items/2/edit">Edit</a></li>
+                         <li class="cha"><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="http://localhost:3000/items/2">Destroy</a></li>
+                      </ul>
+            </div>
+
+              <div class="items-box-like">
+                          <a id="like-button" rel="nofollow" data-method="delete" href="http://localhost:3000/items/2/likes">
+                      <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+</a>                      <span>
+                          2
+                      </span>
+
+              </div>
+
+          
+          </div>
+          
+
+              
+          <div class="col-lg-3 sky">
+
+                <div class="items-box-photo">
+                  <img src="./Farmsharing_files/20160518101459.jpg" alt="20160518101459">
+                </div>
+
+            <div class="items-box-body">
+                    <ul>
+                      <li class="hiro">野菜</li>
+                      <li class="hiro">アボカド</li>
+                      <li class="hiro">10</li>
+                    </ul>
+            </div>
+
+            <div class="items-box-button">
+                      <ul>
+                         <li class="cha"><a href="http://localhost:3000/items/3">Show</a></li>
+                         <li class="cha"><a href="http://localhost:3000/items/3/edit">Edit</a></li>
+                         <li class="cha"><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="http://localhost:3000/items/3">Destroy</a></li>
+                      </ul>
+            </div>
+
+              <div class="items-box-like">
+                          <a id="like-button" rel="nofollow" data-method="delete" href="http://localhost:3000/items/3/likes">
+                      <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+</a>                      <span>
+                          2
+                      </span>
+
+              </div>
+
+          
+          </div>
+          
+
+              
+          <div class="col-lg-3 sky">
+
+                <div class="items-box-photo">
+                  <img src="./Farmsharing_files/20160518145932.jpg" alt="20160518145932">
+                </div>
+
+            <div class="items-box-body">
+                    <ul>
+                      <li class="hiro">野菜</li>
+                      <li class="hiro">トマト</li>
+                      <li class="hiro">3</li>
+                    </ul>
+            </div>
+
+            <div class="items-box-button">
+                      <ul>
+                         <li class="cha"><a href="http://localhost:3000/items/7">Show</a></li>
+                         <li class="cha"><a href="http://localhost:3000/items/7/edit">Edit</a></li>
+                         <li class="cha"><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="http://localhost:3000/items/7">Destroy</a></li>
+                      </ul>
+            </div>
+
+              <div class="items-box-like">
+                          <a id="like-button" rel="nofollow" data-method="post" href="http://localhost:3000/items/7/likes">
+                      <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+</a>                      <span>
+                          1
+                      </span>
+
+              </div>
+
+          
+          </div>
+          
+
+              
+          <div class="col-lg-3 sky">
+
+                <div class="items-box-photo">
+                  <img src="http://localhost:3000/items">
+                </div>
+
+            <div class="items-box-body">
+                    <ul>
+                      <li class="hiro">野菜</li>
+                      <li class="hiro">きゅうり</li>
+                      <li class="hiro">5</li>
+                    </ul>
+            </div>
+
+            <div class="items-box-button">
+                      <ul>
+                         <li class="cha"><a href="http://localhost:3000/items/8">Show</a></li>
+                         <li class="cha"><a href="http://localhost:3000/items/8/edit">Edit</a></li>
+                         <li class="cha"><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="http://localhost:3000/items/8">Destroy</a></li>
+                      </ul>
+            </div>
+
+              <div class="items-box-like">
+                          <a id="like-button" rel="nofollow" data-method="post" href="http://localhost:3000/items/8/likes">
+                      <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+</a>                      <span>
+                          0
+                      </span>
+
+              </div>
+
+          
+          </div>
+          
+
+              
+          <div class="col-lg-3 sky">
+
+                <div class="items-box-photo">
+                  <img src="http://localhost:3000/items">
+                </div>
+
+            <div class="items-box-body">
+                    <ul>
+                      <li class="hiro">野菜</li>
+                      <li class="hiro">かぼちゃ</li>
+                      <li class="hiro">2</li>
+                    </ul>
+            </div>
+
+            <div class="items-box-button">
+                      <ul>
+                         <li class="cha"><a href="http://localhost:3000/items/10">Show</a></li>
+                         <li class="cha"><a href="http://localhost:3000/items/10/edit">Edit</a></li>
+                         <li class="cha"><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="http://localhost:3000/items/10">Destroy</a></li>
+                      </ul>
+            </div>
+
+              <div class="items-box-like">
+                          <a id="like-button" rel="nofollow" data-method="post" href="http://localhost:3000/items/10/likes">
+                      <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+</a>                      <span>
+                          0
+                      </span>
+
+              </div>
+
+          
+          </div>
+          
+
+              
+          <div class="col-lg-3 sky">
+
+                <div class="items-box-photo">
+                  <img src="http://localhost:3000/items">
+                </div>
+
+            <div class="items-box-body">
+                    <ul>
+                      <li class="hiro">野菜</li>
+                      <li class="hiro">玉ねぎ</li>
+                      <li class="hiro">10</li>
+                    </ul>
+            </div>
+
+            <div class="items-box-button">
+                      <ul>
+                         <li class="cha"><a href="http://localhost:3000/items/11">Show</a></li>
+                         <li class="cha"><a href="http://localhost:3000/items/11/edit">Edit</a></li>
+                         <li class="cha"><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="http://localhost:3000/items/11">Destroy</a></li>
+                      </ul>
+            </div>
+
+              <div class="items-box-like">
+                          <a id="like-button" rel="nofollow" data-method="post" href="http://localhost:3000/items/11/likes">
+                      <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+</a>                      <span>
+                          0
+                      </span>
+
+              </div>
+
+          
+          </div>
+          
+
+              
+          <div class="col-lg-3 sky">
+
+                <div class="items-box-photo">
+                  <img src="http://localhost:3000/items">
+                </div>
+
+            <div class="items-box-body">
+                    <ul>
+                      <li class="hiro">野菜</li>
+                      <li class="hiro">人参</li>
+                      <li class="hiro">5</li>
+                    </ul>
+            </div>
+
+            <div class="items-box-button">
+                      <ul>
+                         <li class="cha"><a href="http://localhost:3000/items/12">Show</a></li>
+                         <li class="cha"><a href="http://localhost:3000/items/12/edit">Edit</a></li>
+                         <li class="cha"><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="http://localhost:3000/items/12">Destroy</a></li>
+                      </ul>
+            </div>
+
+              <div class="items-box-like">
+                          <a id="like-button" rel="nofollow" data-method="delete" href="http://localhost:3000/items/12/likes">
+                      <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+</a>                      <span>
+                          1
+                      </span>
+
+              </div>
+
+          
+          </div>
+          
+
+              
+          <div class="col-lg-3 sky">
+
+                <div class="items-box-photo">
+                  <img src="http://localhost:3000/items">
+                </div>
+
+            <div class="items-box-body">
+                    <ul>
+                      <li class="hiro">野菜</li>
+                      <li class="hiro">ナス</li>
+                      <li class="hiro">5</li>
+                    </ul>
+            </div>
+
+            <div class="items-box-button">
+                      <ul>
+                         <li class="cha"><a href="http://localhost:3000/items/13">Show</a></li>
+                         <li class="cha"><a href="http://localhost:3000/items/13/edit">Edit</a></li>
+                         <li class="cha"><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="http://localhost:3000/items/13">Destroy</a></li>
+                      </ul>
+            </div>
+
+              <div class="items-box-like">
+                          <a id="like-button" rel="nofollow" data-method="post" href="http://localhost:3000/items/13/likes">
+                      <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+</a>                      <span>
+                          1
+                      </span>
+
+              </div>
+
+          
+          </div>
+          
+
+              
+          <div class="col-lg-3 sky">
+
+                <div class="items-box-photo">
+                  <img src="http://localhost:3000/items">
+                </div>
+
+            <div class="items-box-body">
+                    <ul>
+                      <li class="hiro">野菜</li>
+                      <li class="hiro">さやいんげん</li>
+                      <li class="hiro">11</li>
+                    </ul>
+            </div>
+
+            <div class="items-box-button">
+                      <ul>
+                         <li class="cha"><a href="http://localhost:3000/items/14">Show</a></li>
+                         <li class="cha"><a href="http://localhost:3000/items/14/edit">Edit</a></li>
+                         <li class="cha"><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="http://localhost:3000/items/14">Destroy</a></li>
+                      </ul>
+            </div>
+
+              <div class="items-box-like">
+                          <a id="like-button" rel="nofollow" data-method="post" href="http://localhost:3000/items/14/likes">
+                      <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+</a>                      <span>
+                          0
+                      </span>
+
+              </div>
+
+          
+          </div>
+          
+
+              
+          <div class="col-lg-3 sky">
+
+                <div class="items-box-photo">
+                  <img src="http://localhost:3000/items">
+                </div>
+
+            <div class="items-box-body">
+                    <ul>
+                      <li class="hiro">野菜</li>
+                      <li class="hiro">たけのこ</li>
+                      <li class="hiro">7</li>
+                    </ul>
+            </div>
+
+            <div class="items-box-button">
+                      <ul>
+                         <li class="cha"><a href="http://localhost:3000/items/15">Show</a></li>
+                         <li class="cha"><a href="http://localhost:3000/items/15/edit">Edit</a></li>
+                         <li class="cha"><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="http://localhost:3000/items/15">Destroy</a></li>
+                      </ul>
+            </div>
+
+              <div class="items-box-like">
+                          <a id="like-button" rel="nofollow" data-method="post" href="http://localhost:3000/items/15/likes">
+                      <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+</a>                      <span>
+                          0
+                      </span>
+
+              </div>
+
+          
+          </div>
+          
+
+              
+          <div class="col-lg-3 sky">
+
+                <div class="items-box-photo">
+                  <img src="http://localhost:3000/items">
+                </div>
+
+            <div class="items-box-body">
+                    <ul>
+                      <li class="hiro">野菜</li>
+                      <li class="hiro">玉ねぎ</li>
+                      <li class="hiro"></li>
+                    </ul>
+            </div>
+
+            <div class="items-box-button">
+                      <ul>
+                         <li class="cha"><a href="http://localhost:3000/items/16">Show</a></li>
+                         <li class="cha"><a href="http://localhost:3000/items/16/edit">Edit</a></li>
+                         <li class="cha"><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="http://localhost:3000/items/16">Destroy</a></li>
+                      </ul>
+            </div>
+
+              <div class="items-box-like">
+                          <a id="like-button" rel="nofollow" data-method="post" href="http://localhost:3000/items/16/likes">
+                      <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+</a>                      <span>
+                          0
+                      </span>
+
+              </div>
+
+          
+          </div>
+          
+
+              
+          <div class="col-lg-3 sky">
+
+                <div class="items-box-photo">
+                  <img src="http://localhost:3000/items">
+                </div>
+
+            <div class="items-box-body">
+                    <ul>
+                      <li class="hiro">野菜</li>
+                      <li class="hiro">里芋</li>
+                      <li class="hiro">12</li>
+                    </ul>
+            </div>
+
+            <div class="items-box-button">
+                      <ul>
+                         <li class="cha"><a href="http://localhost:3000/items/17">Show</a></li>
+                         <li class="cha"><a href="http://localhost:3000/items/17/edit">Edit</a></li>
+                         <li class="cha"><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="http://localhost:3000/items/17">Destroy</a></li>
+                      </ul>
+            </div>
+
+              <div class="items-box-like">
+                          <a id="like-button" rel="nofollow" data-method="post" href="http://localhost:3000/items/17/likes">
+                      <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+</a>                      <span>
+                          0
+                      </span>
+
+              </div>
+
+          
+          </div>
+          
+
+              
+          <div class="col-lg-3 sky">
+
+                <div class="items-box-photo">
+                  <img src="http://localhost:3000/items">
+                </div>
+
+            <div class="items-box-body">
+                    <ul>
+                      <li class="hiro">野菜</li>
+                      <li class="hiro">長ネギ</li>
+                      <li class="hiro">8</li>
+                    </ul>
+            </div>
+
+            <div class="items-box-button">
+                      <ul>
+                         <li class="cha"><a href="http://localhost:3000/items/18">Show</a></li>
+                         <li class="cha"><a href="http://localhost:3000/items/18/edit">Edit</a></li>
+                         <li class="cha"><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="http://localhost:3000/items/18">Destroy</a></li>
+                      </ul>
+            </div>
+
+              <div class="items-box-like">
+                          <a id="like-button" rel="nofollow" data-method="delete" href="http://localhost:3000/items/18/likes">
+                      <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+</a>                      <span>
+                          1
+                      </span>
+
+              </div>
+
+          
+          </div>
+          
+
+              
+          <div class="col-lg-3 sky">
+
+                <div class="items-box-photo">
+                  <img src="http://localhost:3000/items">
+                </div>
+
+            <div class="items-box-body">
+                    <ul>
+                      <li class="hiro">野菜</li>
+                      <li class="hiro">ジャガイモ</li>
+                      <li class="hiro">5</li>
+                    </ul>
+            </div>
+
+            <div class="items-box-button">
+                      <ul>
+                         <li class="cha"><a href="http://localhost:3000/items/19">Show</a></li>
+                         <li class="cha"><a href="http://localhost:3000/items/19/edit">Edit</a></li>
+                         <li class="cha"><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="http://localhost:3000/items/19">Destroy</a></li>
+                      </ul>
+            </div>
+
+              <div class="items-box-like">
+                          <a id="like-button" rel="nofollow" data-method="post" href="http://localhost:3000/items/19/likes">
+                      <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+</a>                      <span>
+                          0
+                      </span>
+
+              </div>
+
+          
+          </div>
+          
+
+              
+          <div class="col-lg-3 sky">
+
+                <div class="items-box-photo">
+                  <img src="http://localhost:3000/items">
+                </div>
+
+            <div class="items-box-body">
+                    <ul>
+                      <li class="hiro">野菜</li>
+                      <li class="hiro">トマト</li>
+                      <li class="hiro">20</li>
+                    </ul>
+            </div>
+
+            <div class="items-box-button">
+                      <ul>
+                         <li class="cha"><a href="http://localhost:3000/items/20">Show</a></li>
+                         <li class="cha"><a href="http://localhost:3000/items/20/edit">Edit</a></li>
+                         <li class="cha"><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="http://localhost:3000/items/20">Destroy</a></li>
+                      </ul>
+            </div>
+
+              <div class="items-box-like">
+                          <a id="like-button" rel="nofollow" data-method="post" href="http://localhost:3000/items/20/likes">
+                      <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+</a>                      <span>
+                          0
+                      </span>
+
+              </div>
+
+          
+          </div>
+          
+
+
+      </div>  
+</div>      
+      
+
+  
+
+
+		 <footer class="footer">
+  
+
+</footer>
+    <p><a rel="nofollow" data-method="delete" href="http://localhost:3000/members/sign_out">ログアウト</a></p>
+	</div>
+
+
+<script id="pocket-btn-js" src="./Farmsharing_files/btn.js"></script><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Farmsharing_files/xd_arbiter.html" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Farmsharing_files/xd_arbiter(1).html" style="border: none;"></iframe></div></div></div></body></html>
